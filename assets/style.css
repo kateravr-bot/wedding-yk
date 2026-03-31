@@ -3,8 +3,10 @@ html {
 }
 
 body {
-  background: #FCF9F5;
+  min-height: 100vh;
+  background: none;
   color: #111111;
+  position: relative;
 }
 
 /* Όλο το site σε Marck Script */
@@ -13,12 +15,51 @@ body * {
   font-family: 'Marck Script', 'Cormorant Garamond', cursive, serif !important;
 }
 
-/* Offset για τα anchor links */
+/* Global background image */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url('../1a8d17f1-0e2b-4f8d-8e26-68a1ca9c0002.jpg') center center / cover no-repeat;
+  z-index: -2;
+}
+
+/* Λευκό φίλτρο για να διαβάζεται το κείμενο */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.58);
+  z-index: -1;
+}
+
+/* Offset για anchor links */
 .section-anchor {
   scroll-margin-top: 90px;
 }
 
-/* Header monogram */
+/* Να μη σβήνουν το background τα sections */
+main > section {
+  background: transparent !important;
+}
+
+/* Κεντρικά panels */
+.site-panel {
+  background: rgba(255, 255, 255, 0.52);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  box-shadow: 0 18px 45px rgba(119, 98, 86, 0.14);
+  border-radius: 32px;
+  padding: 3rem 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .site-panel {
+    padding: 4rem 3rem;
+  }
+}
+
 .site-monogram {
   font-size: 2.2rem;
   color: #8B5FBF !important;
@@ -26,7 +67,6 @@ body * {
   line-height: 1;
 }
 
-/* Κεντρικά ονόματα */
 .hero-names {
   font-size: clamp(4.4rem, 10vw, 8.8rem) !important;
   line-height: 0.92 !important;
@@ -37,21 +77,23 @@ body * {
     0 10px 30px rgba(142, 106, 138, 0.12);
 }
 
-/* Το & ανάμεσα στα ονόματα */
 .hero-amp {
   display: inline-block;
   margin: 0 0.14em;
   color: #8B5FBF !important;
 }
 
-/* "σας προσκαλούμε με χαρά" */
 .hero-invite {
   font-size: clamp(1.8rem, 3vw, 3rem) !important;
   line-height: 1.1 !important;
   color: #8B5FBF !important;
 }
 
-/* Όλοι οι τίτλοι μωβ */
+.hero-meta {
+  color: #111111 !important;
+}
+
+/* Μωβ τίτλοι */
 h1,
 h2,
 h3,
@@ -60,7 +102,7 @@ p.uppercase,
   color: #8B5FBF !important;
 }
 
-/* Περιγραφές μαύρες */
+/* Μαύρες περιγραφές */
 main p:not(.uppercase):not(.hero-invite),
 footer p:last-child,
 .text-ink,
@@ -69,73 +111,16 @@ footer p:last-child,
   color: #111111 !important;
 }
 
-/* Footer names */
 .site-footer-names {
   font-size: 2.2rem;
   line-height: 1.1;
 }
 
-/* Να μείνουν καθαρά τα links */
 a {
   text-decoration: none;
 }
 
-/* Προαιρετικά: λίγο πιο όμορφα κουμπιά */
 button,
 a[class*="rounded-full"] {
   letter-spacing: 0.08em;
-}  margin: 0 0.14em;
-  color: rgba(255,255,255,0.92);
-  transform: translateY(-0.02em);
-}
-
-.hero-invite {
-  font-family: 'Cormorant Garamond', serif;
-  font-style: italic;
-  font-weight: 500;
-  font-size: clamp(1.8rem, 3vw, 3rem);
-  color: var(--subtitle);
-  letter-spacing: 0.01em;
-}
-
-.site-monogram {
-  font-family: 'Marck Script', cursive;
-  font-size: 2.6rem;
-  line-height: 1;
-  color: #b4909a;
-}
-
-.site-footer-names {
-  font-family: 'Marck Script', cursive;
-  font-size: 3rem;
-  line-height: 1;
-  color: var(--mauve);
-}
-
-.hero-card {
-  background: rgba(255,255,255,0.55);
-  backdrop-filter: blur(7px);
-  -webkit-backdrop-filter: blur(7px);
-  border: 1px solid rgba(255,255,255,0.70);
-  box-shadow: var(--shadow-soft);
-}
-
-.hero-bg-overlay {
-  background: linear-gradient(rgba(255,255,255,0.30), rgba(255,255,255,0.55));
-}
-
-.card-soft {
-  background: #fdf9f4;
-  border: 1px solid var(--card-border);
-  box-shadow: var(--shadow-soft);
-}
-
-@media (max-width: 768px) {
-  .hero-names {
-    font-size: clamp(3.4rem, 14vw, 5.8rem);
-  }
-
-  .site-footer-names {
-    font-size: 2.4rem;
-  }
 }
