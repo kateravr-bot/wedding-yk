@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&family=Playfair+Display:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+  --olive: #8C7A6B;
+  --sand: #FCF9F5;
+  --ink: #4E433C;
+  --gold: #D7C2A3;
+  --mauve: #b89699;
+  --blush: #d7bcc7;
+  --subtitle: #8e7d76;
+  --body-soft: #746964;
+  --header-border: #e9dfd4;
+  --card-border: #eee3d7;
+  --shadow-soft: 0 18px 45px rgba(119, 98, 86, 0.14);
+  --shadow-script: 0 2px 8px rgba(180, 140, 170, 0.18), 0 10px 30px rgba(142, 106, 138, 0.12);
+}
+
+html { scroll-behavior: smooth; }
+body {
+  background: var(--sand);
+  color: var(--ink);
+}
+.section-anchor { scroll-margin-top: 90px; }
+
+.hero-names {
+  font-family: 'Marck Script', cursive;
+  font-weight: 400;
+  font-size: clamp(3.9rem, 10vw, 8.2rem);
+  line-height: 0.98;
+  letter-spacing: 0.01em;
+  color: rgba(255,255,255,0.96);
+  text-shadow: var(--shadow-script);
+}
+
+.hero-amp {
+  display: inline-block;
+  margin: 0 0.14em;
+  color: rgba(255,255,255,0.92);
+  transform: translateY(-0.02em);
+}
+
+.hero-invite {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  color: var(--subtitle);
+  letter-spacing: 0.01em;
+}
+
+.site-monogram {
+  font-family: 'Marck Script', cursive;
+  font-size: 2.6rem;
+  line-height: 1;
+  color: #b4909a;
+}
+
+.site-footer-names {
+  font-family: 'Marck Script', cursive;
+  font-size: 3rem;
+  line-height: 1;
+  color: var(--mauve);
+}
+
+.hero-card {
+  background: rgba(255,255,255,0.55);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  border: 1px solid rgba(255,255,255,0.70);
+  box-shadow: var(--shadow-soft);
+}
+
+.hero-bg-overlay {
+  background: linear-gradient(rgba(255,255,255,0.30), rgba(255,255,255,0.55));
+}
+
+.card-soft {
+  background: #fdf9f4;
+  border: 1px solid var(--card-border);
+  box-shadow: var(--shadow-soft);
+}
+
+@media (max-width: 768px) {
+  .hero-names {
+    font-size: clamp(3.4rem, 14vw, 5.8rem);
+  }
+
+  .site-footer-names {
+    font-size: 2.4rem;
+  }
+}
