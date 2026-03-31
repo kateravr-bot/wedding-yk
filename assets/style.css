@@ -1,40 +1,90 @@
-@import url('https://fonts.googleapis.com/css2?family=Marck+Script&family=Playfair+Display:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
-
-:root {
-  --olive: #8C7A6B;
-  --sand: #FCF9F5;
-  --ink: #4E433C;
-  --gold: #D7C2A3;
-  --mauve: #b89699;
-  --blush: #d7bcc7;
-  --subtitle: #8e7d76;
-  --body-soft: #746964;
-  --header-border: #e9dfd4;
-  --card-border: #eee3d7;
-  --shadow-soft: 0 18px 45px rgba(119, 98, 86, 0.14);
-  --shadow-script: 0 2px 8px rgba(180, 140, 170, 0.18), 0 10px 30px rgba(142, 106, 138, 0.12);
+html {
+  scroll-behavior: smooth;
 }
 
-html { scroll-behavior: smooth; }
 body {
-  background: var(--sand);
-  color: var(--ink);
+  background: #FCF9F5;
+  color: #111111;
 }
-.section-anchor { scroll-margin-top: 90px; }
 
+/* Όλο το site σε Marck Script */
+body,
+body * {
+  font-family: 'Marck Script', 'Cormorant Garamond', cursive, serif !important;
+}
+
+/* Offset για τα anchor links */
+.section-anchor {
+  scroll-margin-top: 90px;
+}
+
+/* Header monogram */
+.site-monogram {
+  font-size: 2.2rem;
+  color: #8B5FBF !important;
+  text-decoration: none;
+  line-height: 1;
+}
+
+/* Κεντρικά ονόματα */
 .hero-names {
-  font-family: 'Marck Script', cursive;
-  font-weight: 400;
-  font-size: clamp(3.9rem, 10vw, 8.2rem);
-  line-height: 0.98;
-  letter-spacing: 0.01em;
-  color: rgba(255,255,255,0.96);
-  text-shadow: var(--shadow-script);
+  font-size: clamp(4.4rem, 10vw, 8.8rem) !important;
+  line-height: 0.92 !important;
+  letter-spacing: -0.02em !important;
+  color: #8B5FBF !important;
+  text-shadow:
+    0 2px 8px rgba(180, 140, 170, 0.18),
+    0 10px 30px rgba(142, 106, 138, 0.12);
 }
 
+/* Το & ανάμεσα στα ονόματα */
 .hero-amp {
   display: inline-block;
   margin: 0 0.14em;
+  color: #8B5FBF !important;
+}
+
+/* "σας προσκαλούμε με χαρά" */
+.hero-invite {
+  font-size: clamp(1.8rem, 3vw, 3rem) !important;
+  line-height: 1.1 !important;
+  color: #8B5FBF !important;
+}
+
+/* Όλοι οι τίτλοι μωβ */
+h1,
+h2,
+h3,
+p.uppercase,
+.site-footer-names {
+  color: #8B5FBF !important;
+}
+
+/* Περιγραφές μαύρες */
+main p:not(.uppercase):not(.hero-invite),
+footer p:last-child,
+.text-ink,
+.text-ink\/85,
+.text-ink\/90 {
+  color: #111111 !important;
+}
+
+/* Footer names */
+.site-footer-names {
+  font-size: 2.2rem;
+  line-height: 1.1;
+}
+
+/* Να μείνουν καθαρά τα links */
+a {
+  text-decoration: none;
+}
+
+/* Προαιρετικά: λίγο πιο όμορφα κουμπιά */
+button,
+a[class*="rounded-full"] {
+  letter-spacing: 0.08em;
+}  margin: 0 0.14em;
   color: rgba(255,255,255,0.92);
   transform: translateY(-0.02em);
 }
