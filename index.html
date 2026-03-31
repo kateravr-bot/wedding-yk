@@ -34,11 +34,40 @@
     }
   </script>
 
-  <style>
-    html { scroll-behavior: smooth; }
-    body { background: #FCF9F5; color: #4E433C; }
-    .section-anchor { scroll-margin-top: 90px; }
-  </style>
+<style>
+  html { scroll-behavior: smooth; }
+  body { background: #FCF9F5; color: #4E433C; }
+  .section-anchor { scroll-margin-top: 90px; }
+
+  .hero-names {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: clamp(4.4rem, 10vw, 8.8rem);
+    line-height: 0.9;
+    letter-spacing: -0.03em;
+    color: rgba(255,255,255,0.96);
+    text-shadow:
+      0 2px 8px rgba(180, 140, 170, 0.18),
+      0 10px 30px rgba(142, 106, 138, 0.12);
+  }
+
+  .hero-amp {
+    display: inline-block;
+    margin: 0 0.14em;
+    color: rgba(255,255,255,0.92);
+    transform: translateY(-0.03em);
+  }
+
+  .hero-invite {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: clamp(1.8rem, 3vw, 3rem);
+    color: #8E6A8A;
+    letter-spacing: 0.01em;
+  }
+</style>
 </head>
 
 <body class="font-sans antialiased">
@@ -70,11 +99,11 @@
       <div class="relative z-10 text-center px-8 md:px-16 max-w-4xl pt-24 py-12 md:py-16 bg-white/55 backdrop-blur-sm border border-white/70 shadow-soft rounded-[32px]">
         <p class="uppercase tracking-[0.38em] text-[11px] md:text-xs mb-6 text-[#b89fc0]">Γάμος & Ονοματοδοσία</p>
 
-        <h1 class="font-calligraphy italic font-medium text-6xl md:text-[7rem] leading-none mb-6 text-[#b89699]">
-          Γιάννης <span class="opacity-90 text-[#d7bcc7]">&</span> Κατερίνα
+        <h1 class="hero-names mb-6">
+            Γιάννης <span class="hero-amp">&</span> Κατερίνα
         </h1>
 
-        <p class="font-serif italic text-2xl md:text-4xl mb-5 text-[#8e7d76]">σας προσκαλούμε με χαρά</p>
+        <p class="hero-invite mb-5">σας προσκαλούμε με χαρά</p>
 
         <p class="max-w-2xl mx-auto text-base md:text-xl leading-relaxed text-[#746964]">
           στον γάμο μας και στην ονοματοδοσία του γιου μας,
