@@ -1,59 +1,61 @@
-html {
-  scroll-behavior: smooth;
-}
-
 * {
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
   min-height: 100vh;
-  color: #111111;
+  background: none;
+  color: #1f1b20;
   position: relative;
-  overflow-x: hidden;
-  background-color: #f7f1eb;
   font-family: 'Cormorant Garamond', serif;
 }
 
-main,
-header,
-footer {
-  position: relative;
-  z-index: 1;
-}
-
+/* Background image */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
   background: url('./1a8d17f1-0e2b-4f8d-8e26-68a1ca9c0002.jpg') center center / cover no-repeat;
-  z-index: 0;
-  pointer-events: none;
+  z-index: -2;
 }
 
+/* Soft white overlay */
 body::after {
   content: "";
   position: fixed;
   inset: 0;
-  background: rgba(255, 255, 255, 0.58);
-  z-index: 0;
-  pointer-events: none;
+  background: rgba(255, 255, 255, 0.56);
+  z-index: -1;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
 }
 
 .section-anchor {
-  scroll-margin-top: 96px;
+  scroll-margin-top: 100px;
 }
 
 main > section {
-  background: transparent;
+  background: transparent !important;
 }
 
+/* Main frosted panels */
 .site-panel {
-  background: rgba(255, 255, 255, 0.52);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.72);
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
   box-shadow: 0 18px 45px rgba(119, 98, 86, 0.14);
   border-radius: 32px;
   padding: 3rem 1.5rem;
@@ -66,98 +68,140 @@ main > section {
 }
 
 .shadow-soft {
-  box-shadow: 0 18px 45px rgba(119, 98, 86, 0.14);
+  box-shadow: 0 16px 34px rgba(109, 87, 118, 0.12);
 }
 
+/* Typography */
 .site-monogram,
 .hero-names,
-.hero-invite,
 .site-footer-names {
-  font-family: 'Marck Script', cursive;
+  font-family: 'Caveat', cursive;
+  color: #4f4561;
 }
 
 .site-monogram {
-  font-size: 2.2rem;
-  color: #8B5FBF;
-  text-decoration: none;
+  font-size: 2rem;
   line-height: 1;
   white-space: nowrap;
 }
 
 .hero-names {
-  font-size: clamp(4.4rem, 10vw, 8.8rem);
+  font-size: clamp(4.3rem, 10vw, 8rem);
   line-height: 0.92;
   letter-spacing: -0.02em;
-  color: #8B5FBF;
+  font-weight: 600;
+  color: #4f4561;
   text-shadow:
-    0 2px 8px rgba(180, 140, 170, 0.18),
-    0 10px 30px rgba(142, 106, 138, 0.12);
+    0 3px 10px rgba(79, 69, 97, 0.12),
+    0 10px 30px rgba(79, 69, 97, 0.08);
 }
 
 .hero-amp {
   display: inline-block;
-  margin: 0 0.14em;
-  color: #8B5FBF;
+  margin: 0 0.08em;
 }
 
 .hero-invite {
-  font-size: clamp(1.8rem, 3vw, 3rem);
-  line-height: 1.1;
-  color: #8B5FBF;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.5rem, 2.6vw, 2.2rem);
+  line-height: 1.15;
+  color: #6f607d;
+  font-style: italic;
 }
 
 .hero-meta {
-  color: #111111;
-}
-
-h1,
-h2,
-h3,
-p.uppercase,
-.site-footer-names,
-.section-title {
-  color: #8B5FBF;
-}
-
-.body-copy,
-main p:not(.uppercase):not(.hero-invite),
-footer p:last-child,
-.text-ink,
-.text-ink\/85,
-.text-ink\/90 {
-  color: #111111;
+  color: #4a3f4d;
 }
 
 .site-footer-names {
-  font-size: 2.2rem;
-  line-height: 1.1;
+  font-size: 2.5rem;
+  line-height: 1;
 }
 
-a {
-  text-decoration: none;
+.section-title,
+h1,
+h2,
+h3 {
+  font-family: 'Cormorant Garamond', serif;
+  color: #6c5379;
+  font-weight: 600;
 }
 
-iframe,
-img {
-  display: block;
-}
-
+p,
+a,
 button,
-a[class*="rounded-full"] {
+nav,
+.body-copy {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+p {
+  color: #2c2530;
+}
+
+p.uppercase {
+  color: #8b6c97;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+}
+
+.text-sm,
+.text-xs {
   letter-spacing: 0.08em;
 }
 
+/* Navigation */
+header nav a {
+  color: #7a6c73 !important;
+  font-weight: 600;
+}
+
+header nav a:hover {
+  opacity: 0.78;
+}
+
+/* Buttons */
+a[class*="rounded-full"],
+button {
+  letter-spacing: 0.12em;
+  font-weight: 600;
+}
+
+/* Venue / info cards */
+.bg-white\/45 {
+  background: rgba(255, 255, 255, 0.45) !important;
+}
+
+.border-white\/60 {
+  border-color: rgba(255, 255, 255, 0.6) !important;
+}
+
+/* Footer secondary text */
+footer p:last-child {
+  color: #5b4e5c;
+}
+
+/* Responsive */
 @media (max-width: 767px) {
   .site-monogram {
-    font-size: 1.55rem;
+    font-size: 1.5rem;
   }
 
   .hero-names {
-    font-size: clamp(3.2rem, 16vw, 5rem);
+    font-size: clamp(3.4rem, 15vw, 5.3rem);
+    line-height: 0.95;
+  }
+
+  .hero-invite {
+    font-size: 1.3rem;
+  }
+
+  .site-footer-names {
+    font-size: 2rem;
   }
 
   .site-panel {
-    border-radius: 24px;
-    padding: 2rem 1.25rem;
+    border-radius: 26px;
+    padding: 2.2rem 1.2rem;
   }
 }
