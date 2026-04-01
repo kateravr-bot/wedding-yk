@@ -20,11 +20,11 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: url('./1a8d17f1-0e2b-4f8d-8e26-68a1ca9c0002.jpg') center center / cover no-repeat;
+  background: url('./foto2.png') center center / cover no-repeat;
   z-index: -2;
 }
 
-/* Soft white overlay για να διαβάζεται καθαρά το κείμενο */
+/* Soft white overlay */
 body::after {
   content: "";
   position: fixed;
@@ -50,7 +50,7 @@ main > section {
   background: transparent !important;
 }
 
-/* Καθαρό layout χωρίς λευκά panels */
+/* Clean layout without white panels */
 .site-panel {
   background: transparent;
   backdrop-filter: none;
@@ -67,7 +67,7 @@ main > section {
   }
 }
 
-/* Αφαιρούμε τα λευκά εσωτερικά κουτιά */
+/* Remove inner white boxes */
 .bg-white\/45 {
   background: transparent !important;
 }
@@ -129,6 +129,7 @@ main > section {
   color: #5f536e;
 }
 
+/* Invitation text */
 .hero-invite,
 .invitation-message {
   font-family: 'Annie Use Your Telescope', cursive;
@@ -148,8 +149,39 @@ main > section {
   letter-spacing: 0.01em;
 }
 
+/* Smaller text under names */
+.hero-invite-small {
+  font-size: clamp(1.35rem, 2vw, 1.75rem);
+}
+
+.invitation-message-small {
+  font-size: clamp(1.05rem, 1.45vw, 1.3rem);
+  line-height: 1.45;
+}
+
+/* Bigger date and venue */
 .hero-meta {
   color: #4a3f4d;
+}
+
+.hero-meta-large {
+  letter-spacing: 0.16em;
+}
+
+.hero-date {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.4rem, 2.4vw, 2rem);
+  line-height: 1.2;
+  font-weight: 700;
+  color: #5a4c67;
+}
+
+.hero-venue {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.5rem, 2.8vw, 2.3rem);
+  line-height: 1.2;
+  font-weight: 700;
+  color: #4f4561;
 }
 
 .site-footer-names {
@@ -234,6 +266,23 @@ footer p:last-child {
   .invitation-message {
     font-size: clamp(1.2rem, 5.4vw, 1.5rem);
     line-height: 1.42;
+  }
+
+  .hero-invite-small {
+    font-size: clamp(1.2rem, 5.2vw, 1.5rem);
+  }
+
+  .invitation-message-small {
+    font-size: clamp(0.98rem, 4.3vw, 1.15rem);
+    line-height: 1.4;
+  }
+
+  .hero-date {
+    font-size: clamp(1.15rem, 5vw, 1.45rem);
+  }
+
+  .hero-venue {
+    font-size: clamp(1.25rem, 5.8vw, 1.65rem);
   }
 
   .site-footer-names {
