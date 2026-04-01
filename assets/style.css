@@ -20,7 +20,7 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: url('./1a8d17f1-0e2b-4f8d-8e26-68a1ca9c0002.jpg') center center / cover no-repeat;
+  background: url('./foto1.png') center center / cover no-repeat;
   z-index: -2;
 }
 
