@@ -1,53 +1,54 @@
-body {
-  background: red !important;
-}
-
 html {
   scroll-behavior: smooth;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
+  margin: 0;
   min-height: 100vh;
-  background: none;
   color: #111111;
   position: relative;
+  overflow-x: hidden;
+  background-color: #f7f1eb;
+  font-family: 'Cormorant Garamond', serif;
 }
 
-/* Όλο το site σε Marck Script */
-body,
-body * {
-  font-family: 'Marck Script', 'Cormorant Garamond', cursive, serif !important;
+main,
+header,
+footer {
+  position: relative;
+  z-index: 1;
 }
 
-/* Global background image */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
   background: url('./1a8d17f1-0e2b-4f8d-8e26-68a1ca9c0002.jpg') center center / cover no-repeat;
-  z-index: -2;
+  z-index: 0;
+  pointer-events: none;
 }
 
-/* Λευκό φίλτρο για να διαβάζεται το κείμενο */
 body::after {
   content: "";
   position: fixed;
   inset: 0;
   background: rgba(255, 255, 255, 0.58);
-  z-index: -1;
+  z-index: 0;
+  pointer-events: none;
 }
 
-/* Offset για anchor links */
 .section-anchor {
-  scroll-margin-top: 90px;
+  scroll-margin-top: 96px;
 }
 
-/* Να μη σβήνουν το background τα sections */
 main > section {
-  background: transparent !important;
+  background: transparent;
 }
 
-/* Κεντρικά panels */
 .site-panel {
   background: rgba(255, 255, 255, 0.52);
   backdrop-filter: blur(8px);
@@ -64,18 +65,30 @@ main > section {
   }
 }
 
+.shadow-soft {
+  box-shadow: 0 18px 45px rgba(119, 98, 86, 0.14);
+}
+
+.site-monogram,
+.hero-names,
+.hero-invite,
+.site-footer-names {
+  font-family: 'Marck Script', cursive;
+}
+
 .site-monogram {
   font-size: 2.2rem;
-  color: #8B5FBF !important;
+  color: #8B5FBF;
   text-decoration: none;
   line-height: 1;
+  white-space: nowrap;
 }
 
 .hero-names {
-  font-size: clamp(4.4rem, 10vw, 8.8rem) !important;
-  line-height: 0.92 !important;
-  letter-spacing: -0.02em !important;
-  color: #8B5FBF !important;
+  font-size: clamp(4.4rem, 10vw, 8.8rem);
+  line-height: 0.92;
+  letter-spacing: -0.02em;
+  color: #8B5FBF;
   text-shadow:
     0 2px 8px rgba(180, 140, 170, 0.18),
     0 10px 30px rgba(142, 106, 138, 0.12);
@@ -84,35 +97,35 @@ main > section {
 .hero-amp {
   display: inline-block;
   margin: 0 0.14em;
-  color: #8B5FBF !important;
+  color: #8B5FBF;
 }
 
 .hero-invite {
-  font-size: clamp(1.8rem, 3vw, 3rem) !important;
-  line-height: 1.1 !important;
-  color: #8B5FBF !important;
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  line-height: 1.1;
+  color: #8B5FBF;
 }
 
 .hero-meta {
-  color: #111111 !important;
+  color: #111111;
 }
 
-/* Μωβ τίτλοι */
 h1,
 h2,
 h3,
 p.uppercase,
-.site-footer-names {
-  color: #8B5FBF !important;
+.site-footer-names,
+.section-title {
+  color: #8B5FBF;
 }
 
-/* Μαύρες περιγραφές */
+.body-copy,
 main p:not(.uppercase):not(.hero-invite),
 footer p:last-child,
 .text-ink,
 .text-ink\/85,
 .text-ink\/90 {
-  color: #111111 !important;
+  color: #111111;
 }
 
 .site-footer-names {
@@ -124,7 +137,27 @@ a {
   text-decoration: none;
 }
 
+iframe,
+img {
+  display: block;
+}
+
 button,
 a[class*="rounded-full"] {
   letter-spacing: 0.08em;
+}
+
+@media (max-width: 767px) {
+  .site-monogram {
+    font-size: 1.55rem;
+  }
+
+  .hero-names {
+    font-size: clamp(3.2rem, 16vw, 5rem);
+  }
+
+  .site-panel {
+    border-radius: 24px;
+    padding: 2rem 1.25rem;
+  }
 }
