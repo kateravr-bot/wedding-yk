@@ -125,12 +125,24 @@ main > section {
   color: #5e526d;
 }
 
+/* Νέα handwritten γραφή για το invitation text */
+.hero-invite,
+.invitation-message {
+  font-family: 'Annie Use Your Telescope', cursive;
+  color: #5f536e;
+  font-weight: 400;
+}
+
 .hero-invite {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(1.5rem, 2.6vw, 2.2rem);
-  line-height: 1.15;
-  color: #6f607d;
-  font-style: italic;
+  font-size: clamp(1.8rem, 3vw, 2.7rem);
+  line-height: 1.1;
+  margin-bottom: 0.8rem;
+}
+
+.invitation-message {
+  font-size: clamp(1.35rem, 2.1vw, 1.9rem);
+  line-height: 1.45;
+  letter-spacing: 0.01em;
 }
 
 .hero-meta {
@@ -212,7 +224,12 @@ footer p:last-child {
   }
 
   .hero-invite {
-    font-size: 1.3rem;
+    font-size: clamp(1.55rem, 7vw, 2.1rem);
+  }
+
+  .invitation-message {
+    font-size: clamp(1.2rem, 5.4vw, 1.5rem);
+    line-height: 1.42;
   }
 
   .site-footer-names {
