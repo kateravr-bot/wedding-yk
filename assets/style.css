@@ -20,7 +20,7 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: url('./foto2.png') center center / cover no-repeat;
+  background: url('./1a8d17f1-0e2b-4f8d-8e26-68a1ca9c0002.jpg') center center / cover no-repeat;
   z-index: -2;
 }
 
@@ -58,12 +58,12 @@ main > section {
   border: none;
   box-shadow: none;
   border-radius: 0;
-  padding: 3rem 1.5rem;
+  padding: 2rem 1.25rem;
 }
 
 @media (min-width: 768px) {
   .site-panel {
-    padding: 4rem 3rem;
+    padding: 2.5rem 2rem;
   }
 }
 
@@ -290,6 +290,6 @@ footer p:last-child {
   }
 
   .site-panel {
-    padding: 2.2rem 1.2rem;
+    padding: 1.5rem 1rem;
   }
 }
