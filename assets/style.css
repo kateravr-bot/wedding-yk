@@ -20,7 +20,7 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: url('./foto3.png') center center / cover no-repeat;
+  background: url('./foto4.png') center center / cover no-repeat;
   z-index: -2;
 }
 
