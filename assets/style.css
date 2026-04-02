@@ -1,8 +1,11 @@
 @font-face {
   font-family: 'Amsterline';
-  src: url('./Amsterline.ttf') format('truetype');
+  src:
+    local('Amsterline'),
+    url('./Amsterline.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
 * {
@@ -120,7 +123,7 @@ main > section {
 
 .hero-name-line,
 .site-footer-names {
-  font-family: 'Amsterline', cursive;
+  font-family: 'Amsterline', 'Times New Roman', serif;
 }
 
 .hero-amp {
@@ -308,7 +311,7 @@ footer p:last-child {
 
   .hero-amp {
     font-size: clamp(2rem, 7vw, 3rem);
-    line-height: 0.6;
+    line-height: 0.85;
   }
 
   .hero-invite {
@@ -338,7 +341,8 @@ footer p:last-child {
   }
 
   .site-footer-names {
-    font-size: 2.2rem;
+    font-size: 2.1rem;
+    line-height: 1;
   }
 
   .closing-note {
