@@ -12,7 +12,7 @@ body {
   background: none;
   color: #1f1b20;
   position: relative;
-  font-family: 'Caveat', 'Cormorant Garamond', serif;
+  font-family: 'Cormorant Garamond', serif;
 }
 
 body::before {
@@ -27,7 +27,7 @@ body::after {
   content: "";
   position: fixed;
   inset: 0;
-  background: rgba(255, 255, 255, 0.60);
+  background: rgba(255, 255, 255, 0.62);
   z-index: -1;
 }
 
@@ -41,7 +41,7 @@ a {
 }
 
 .section-anchor {
-  scroll-margin-top: 84px;
+  scroll-margin-top: 100px;
 }
 
 main > section {
@@ -55,27 +55,27 @@ main > section {
   border: none;
   box-shadow: none;
   border-radius: 0;
-  padding: 1rem 1rem;
+  padding: 2rem 1.25rem;
 }
 
 @media (min-width: 768px) {
   .site-panel {
-    padding: 1.4rem 1.3rem;
+    padding: 2.5rem 2rem;
   }
 }
 
 .info-card {
   background: rgba(255, 255, 255, 0.34);
-  border: 1px solid rgba(255, 255, 255, 0.62);
-  box-shadow: 0 14px 34px rgba(79, 69, 97, 0.08);
-  backdrop-filter: blur(9px);
-  -webkit-backdrop-filter: blur(9px);
+  border: 1px solid rgba(255, 255, 255, 0.58);
+  box-shadow: 0 16px 40px rgba(79, 69, 97, 0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .map-wrap,
 .venue-image,
 .shadow-soft {
-  box-shadow: 0 16px 38px rgba(79, 69, 97, 0.1) !important;
+  box-shadow: 0 18px 45px rgba(79, 69, 97, 0.1) !important;
 }
 
 .map-wrap {
@@ -83,17 +83,18 @@ main > section {
 }
 
 .soft-button {
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.38);
 }
 
 .site-monogram {
   font-family: 'Cormorant Garamond', serif;
   color: #4f4561;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   line-height: 1;
   white-space: nowrap;
   font-weight: 600;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .hero-names,
@@ -118,7 +119,7 @@ main > section {
 
 .hero-name-line {
   display: block;
-  font-size: clamp(4.6rem, 10vw, 8rem);
+  font-size: clamp(4.8rem, 10vw, 8.4rem);
   line-height: 0.84;
   font-weight: 400;
   letter-spacing: 0;
@@ -126,7 +127,7 @@ main > section {
 
 .hero-amp {
   display: block;
-  font-size: clamp(2.3rem, 4.8vw, 3.8rem);
+  font-size: clamp(2.5rem, 4.8vw, 4rem);
   line-height: 0.55;
   margin: -0.08em 0 -0.02em;
   font-weight: 400;
@@ -135,45 +136,31 @@ main > section {
 
 .hero-invite,
 .invitation-message,
-.closing-note,
-.body-copy,
-header nav a,
-a[class*="rounded-full"],
-.mobile-rsvp-button,
-.footer-meta,
-p,
-a,
-button,
-nav {
-  font-family: 'Caveat', 'Cormorant Garamond', serif;
-}
-
-.hero-invite,
-.invitation-message,
 .closing-note {
+  font-family: 'Annie Use Your Telescope', cursive;
   color: #5f536e;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .hero-invite {
-  font-size: clamp(2rem, 3.2vw, 2.9rem);
-  line-height: 1.08;
-  margin-bottom: 0.7rem;
+  font-size: clamp(1.8rem, 3vw, 2.7rem);
+  line-height: 1.1;
+  margin-bottom: 0.8rem;
 }
 
 .invitation-message {
-  font-size: clamp(1.65rem, 2.5vw, 2.2rem);
-  line-height: 1.35;
+  font-size: clamp(1.35rem, 2.1vw, 1.9rem);
+  line-height: 1.45;
   letter-spacing: 0.01em;
 }
 
 .hero-invite-small {
-  font-size: clamp(1.7rem, 2.5vw, 2.2rem);
+  font-size: clamp(1.35rem, 2vw, 1.75rem);
 }
 
 .invitation-message-small {
-  font-size: clamp(1.35rem, 1.9vw, 1.8rem);
-  line-height: 1.38;
+  font-size: clamp(1.05rem, 1.45vw, 1.3rem);
+  line-height: 1.45;
 }
 
 .hero-meta {
@@ -181,12 +168,12 @@ nav {
 }
 
 .hero-meta-large {
-  letter-spacing: 0.04em;
+  letter-spacing: 0.16em;
 }
 
 .hero-date {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(1.4rem, 2.3vw, 1.95rem);
+  font-size: clamp(1.4rem, 2.4vw, 2rem);
   line-height: 1.2;
   font-weight: 700;
   color: #5a4c67;
@@ -194,7 +181,7 @@ nav {
 
 .hero-venue {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(1.45rem, 2.6vw, 2.2rem);
+  font-size: clamp(1.5rem, 2.8vw, 2.3rem);
   line-height: 1.2;
   font-weight: 700;
   color: #4f4561;
@@ -214,22 +201,34 @@ h3 {
   font-weight: 600;
 }
 
+p,
+a,
+button,
+nav,
+.body-copy {
+  font-family: 'Cormorant Garamond', serif;
+}
+
 p {
   color: #2c2530;
 }
 
+p.uppercase,
 .section-kicker,
 .hero-kicker {
-  font-family: 'Caveat', 'Cormorant Garamond', serif;
   color: #8b6c97;
   font-weight: 600;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.24em;
+}
+
+.text-sm,
+.text-xs {
+  letter-spacing: 0.08em;
 }
 
 header nav a {
   color: #7a6c73 !important;
-  font-size: 1.45rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 header nav a:hover {
@@ -238,9 +237,8 @@ header nav a:hover {
 
 a[class*="rounded-full"],
 button {
-  letter-spacing: 0.04em;
+  letter-spacing: 0.12em;
   font-weight: 600;
-  font-size: 1.15rem;
 }
 
 .footer-meta,
@@ -249,8 +247,8 @@ footer p:last-child {
 }
 
 .closing-note {
-  font-size: clamp(2rem, 3vw, 2.7rem);
-  line-height: 1.12;
+  font-size: clamp(1.8rem, 3.2vw, 2.8rem);
+  line-height: 1.15;
   color: #594c68;
 }
 
@@ -260,7 +258,7 @@ footer p:last-child {
   right: 0;
   bottom: 0;
   z-index: 60;
-  padding: 0.8rem 1rem calc(0.85rem + env(safe-area-inset-bottom));
+  padding: 0.9rem 1rem calc(0.9rem + env(safe-area-inset-bottom));
   background: linear-gradient(to top, rgba(250, 245, 241, 0.96), rgba(250, 245, 241, 0.78));
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -272,28 +270,29 @@ footer p:last-child {
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 0.9rem 1.2rem;
+  padding: 0.95rem 1.25rem;
   border-radius: 9999px;
   background: #bda88c;
   color: #ffffff;
-  letter-spacing: 0.04em;
-  font-size: 1.35rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.95rem;
   font-weight: 600;
   box-shadow: 0 14px 32px rgba(79, 69, 97, 0.18);
 }
 
 @media (max-width: 767px) {
   body {
-    padding-bottom: 5.6rem;
+    padding-bottom: 5.8rem;
   }
 
   .site-monogram {
-    font-size: 0.98rem;
-    letter-spacing: 0.04em;
+    font-size: 1rem;
+    letter-spacing: 0.06em;
   }
 
   .hero-name-line {
-    font-size: clamp(3.7rem, 14vw, 5.6rem);
+    font-size: clamp(3.8rem, 14vw, 5.8rem);
     line-height: 0.88;
   }
 
@@ -303,28 +302,40 @@ footer p:last-child {
   }
 
   .hero-invite {
-    font-size: clamp(1.75rem, 7vw, 2.2rem);
+    font-size: clamp(1.55rem, 7vw, 2.1rem);
   }
 
   .invitation-message {
-    font-size: clamp(1.45rem, 5.8vw, 1.8rem);
-    line-height: 1.36;
+    font-size: clamp(1.2rem, 5.4vw, 1.5rem);
+    line-height: 1.42;
   }
 
   .hero-invite-small {
-    font-size: clamp(1.5rem, 5.6vw, 1.9rem);
+    font-size: clamp(1.2rem, 5.2vw, 1.5rem);
   }
 
   .invitation-message-small {
-    font-size: clamp(1.22rem, 4.9vw, 1.48rem);
-    line-height: 1.36;
+    font-size: clamp(0.98rem, 4.3vw, 1.15rem);
+    line-height: 1.4;
+  }
+
+  .hero-date {
+    font-size: clamp(1.15rem, 5vw, 1.45rem);
+  }
+
+  .hero-venue {
+    font-size: clamp(1.25rem, 5.8vw, 1.65rem);
   }
 
   .site-footer-names {
-    font-size: 2.35rem;
+    font-size: 2.2rem;
+  }
+
+  .closing-note {
+    font-size: clamp(1.45rem, 7vw, 2rem);
   }
 
   .site-panel {
-    padding: 0.85rem 0.75rem;
+    padding: 1.5rem 1rem;
   }
 }
