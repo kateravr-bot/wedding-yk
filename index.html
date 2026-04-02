@@ -20,13 +20,14 @@
 </head>
 
 <body class="antialiased">
-  <header class="fixed top-0 left-0 right-0 z-50 bg-white/70 backdrop-blur-xl border-b border-[#e9dfd4]">
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white/72 backdrop-blur-xl border-b border-[#e9dfd4]">
     <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between gap-6">
- <!--     <a href="#top" class="site-monogram">Γ &amp; Κ | 29 Αυγούστου 2026</a> -->
+      <a href="#top" class="site-monogram">Γ &amp; Κ · 29.08.2026</a>
 
-      <nav class="hidden md:flex items-center gap-8 text-[11px] uppercase tracking-[0.28em] text-[#8f8076]">
+      <nav class="hidden md:flex items-center gap-8 text-[15px] uppercase tracking-[0.24em] text-[#8f8076]">
         <a href="#invitation" class="hover:opacity-80 transition">Πρόσκληση</a>
         <a href="#venue" class="hover:opacity-80 transition">Κτήμα</a>
+        <a href="#details" class="hover:opacity-80 transition">Πληροφορίες</a>
         <a href="#rsvp" class="hover:opacity-80 transition">RSVP</a>
         <a href="#gift" class="hover:opacity-80 transition">Δώρο</a>
       </nav>
@@ -34,9 +35,9 @@
   </header>
 
   <main id="top">
-    <section id="invitation" class="section-anchor relative min-h-screen flex items-center justify-center overflow-hidden px-6 pt-24 pb-8">
+    <section id="invitation" class="section-anchor relative min-h-screen flex items-center justify-center overflow-hidden px-6 pt-28 pb-10">
       <div class="site-panel relative z-10 text-center max-w-4xl mx-auto">
-        <p class="uppercase tracking-[0.38em] text-[40px] md:text-xs mb-6">
+        <p class="uppercase tracking-[0.34em] text-[15px] md:text-[18px] mb-6 hero-kicker">
           Γάμος &amp; Ονοματοδοσία
         </p>
 
@@ -68,7 +69,7 @@
 
           <a
             href="#venue"
-            class="border border-[#d8c6d3] text-[#8B5FBF] px-8 py-3 rounded-full text-sm uppercase tracking-[0.20em] hover:bg-white/70 transition"
+            class="border border-[#d8c6d3] text-[#8B5FBF] px-8 py-3 rounded-full text-sm uppercase tracking-[0.20em] hover:bg-white/70 transition soft-button"
           >
             Τοποθεσία
           </a>
@@ -76,26 +77,29 @@
       </div>
     </section>
 
-    <section id="venue" class="section-anchor py-10 md:py-14 px-6">
+    <section id="venue" class="section-anchor py-12 md:py-16 px-6">
       <div class="site-panel max-w-6xl mx-auto">
         <div class="grid lg:grid-cols-2 gap-14 items-center">
           <div>
-            <p class="uppercase tracking-[0.28em] text-xs mb-4">Η Τοποθεσία</p>
+            <p class="uppercase tracking-[0.28em] text-[13px] md:text-[15px] mb-4 section-kicker">Η Τοποθεσία</p>
 
             <h2 class="text-5xl md:text-6xl tracking-[0.03em] mb-8 section-title">
               Κτήμα Κλεοπάτρα
             </h2>
 
-            <div class="mt-8 bg-white/45 rounded-[28px] p-7 shadow-soft border border-white/60">
-              <p class="text-xs uppercase tracking-[0.22em] mb-3">Διεύθυνση</p>
-              <p class="text-lg font-medium body-copy">Θεμιστοκλέους 7, Οικισμός Αγίου Ιωάννη, Κορωπί</p>
+            <div class="mt-8 info-card rounded-[28px] p-7">
+              <p class="text-[13px] uppercase tracking-[0.22em] mb-3 section-kicker">Διεύθυνση</p>
+              <p class="text-xl font-medium body-copy">Θεμιστοκλέους 7, Οικισμός Αγίου Ιωάννη, Κορωπί</p>
+              <p class="mt-4 body-copy text-lg leading-relaxed text-[#564a57]">
+                Το κτήμα διαθέτει άνετη πρόσβαση και χώρο στάθμευσης για τους καλεσμένους.
+              </p>
 
               <div class="mt-5 flex flex-wrap gap-3">
                 <a
                   href="https://www.ktimakleopatra.gr/ktima/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="inline-flex items-center border border-[#bda88c] text-[#8B5FBF] px-5 py-3 rounded-full text-sm uppercase tracking-[0.18em] hover:bg-[#bda88c] hover:text-white transition"
+                  class="inline-flex items-center border border-[#bda88c] text-[#8B5FBF] px-5 py-3 rounded-full text-sm uppercase tracking-[0.18em] hover:bg-[#bda88c] hover:text-white transition soft-button"
                 >
                   Το Κτήμα
                 </a>
@@ -107,13 +111,13 @@
             <img
               src="https://www.ktimakleopatra.gr/wp-content/uploads/2024/11/ktima-gamou-kleopatra-1-e1731666737147-768x512.webp"
               alt="Κτήμα Κλεοπάτρα εξωτερικός χώρος"
-              class="rounded-3xl shadow-soft h-72 md:h-96 w-full object-cover"
+              class="rounded-3xl venue-image h-72 md:h-96 w-full object-cover"
               loading="lazy"
             />
           </div>
         </div>
 
-        <div class="mt-8 overflow-hidden rounded-[30px] shadow-soft border border-white/60">
+        <div class="mt-8 map-wrap overflow-hidden rounded-[30px]">
           <iframe
             src="https://maps.google.com/maps?q=Ktima+Kleopatra+%CE%98%CE%B5%CE%BC%CE%B9%CF%83%CF%84%CE%BF%CE%BA%CE%BB%CE%AD%CE%BF%CF%85%CF%82+7+%CE%9A%CE%BF%CF%81%CF%89%CF%80%CE%AF&output=embed&hl=el"
             width="100%"
@@ -128,16 +132,48 @@
       </div>
     </section>
 
-    <section id="rsvp" class="section-anchor py-10 md:py-14 px-6">
+    <section id="details" class="section-anchor py-12 md:py-16 px-6">
+      <div class="site-panel max-w-6xl mx-auto text-center">
+        <p class="uppercase tracking-[0.28em] text-[13px] md:text-[15px] mb-4 section-kicker">Χρήσιμες Πληροφορίες</p>
+
+        <h2 class="text-5xl md:text-6xl tracking-[0.03em] mb-10 section-title">
+          Όσα θα θέλαμε να γνωρίζετε
+        </h2>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5 text-left">
+          <div class="info-card rounded-[28px] p-6">
+            <p class="text-[13px] uppercase tracking-[0.2em] mb-3 section-kicker">Προσέλευση</p>
+            <p class="text-xl body-copy leading-relaxed">Σας προτείνουμε να βρίσκεστε στο κτήμα λίγο νωρίτερα, ώστε να ξεκινήσουμε όλοι μαζί όμορφα τη βραδιά.</p>
+          </div>
+
+          <div class="info-card rounded-[28px] p-6">
+            <p class="text-[13px] uppercase tracking-[0.2em] mb-3 section-kicker">Στάθμευση</p>
+            <p class="text-xl body-copy leading-relaxed">Υπάρχει διαθέσιμος χώρος στάθμευσης για τους καλεσμένους εντός ή πολύ κοντά στον χώρο της εκδήλωσης.</p>
+          </div>
+
+          <div class="info-card rounded-[28px] p-6">
+            <p class="text-[13px] uppercase tracking-[0.2em] mb-3 section-kicker">RSVP</p>
+            <p class="text-xl body-copy leading-relaxed">Παρακαλούμε να επιβεβαιώσετε την παρουσία σας έως τις 20/07, ώστε να οργανώσουμε τη βραδιά με τον καλύτερο τρόπο.</p>
+          </div>
+
+          <div class="info-card rounded-[28px] p-6">
+            <p class="text-[13px] uppercase tracking-[0.2em] mb-3 section-kicker">Μετά την τελετή</p>
+            <p class="text-xl body-copy leading-relaxed">Θα ακολουθήσει δεξίωση και γιορτή στον ίδιο χώρο. Ανυπομονούμε να το ζήσουμε μαζί σας.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="rsvp" class="section-anchor py-12 md:py-16 px-6">
       <div class="site-panel max-w-3xl mx-auto text-center">
-        <p class="uppercase tracking-[0.28em] text-xs mb-4">RSVP</p>
+        <p class="uppercase tracking-[0.28em] text-[13px] md:text-[15px] mb-4 section-kicker">RSVP</p>
 
         <h2 class="text-5xl md:text-6xl tracking-[0.03em] mb-6 section-title">
           Επιβεβαίωση Παρουσίας
         </h2>
 
-        <p class="text-lg max-w-2xl mx-auto leading-relaxed mb-10 body-copy">
-          Θα χαρούμε πολύ να μας ενημερώσετε για την παρουσία σας ως τις 20/07,
+        <p class="text-xl max-w-2xl mx-auto leading-relaxed mb-10 body-copy">
+          Θα χαρούμε πολύ να μας ενημερώσετε για την παρουσία σας έως τις 20/07,
           πατώντας στο παρακάτω κουμπί.
         </p>
 
@@ -152,24 +188,32 @@
       </div>
     </section>
 
-    <section id="gift" class="section-anchor py-10 md:py-14 px-6">
+    <section id="gift" class="section-anchor py-12 md:py-16 px-6">
       <div class="site-panel max-w-3xl mx-auto text-center">
-        <p class="uppercase tracking-[0.28em] text-xs mb-4">Προαιρετικό Δώρο</p>
+        <p class="uppercase tracking-[0.28em] text-[13px] md:text-[15px] mb-4 section-kicker">Προαιρετικό Δώρο</p>
 
         <h2 class="text-5xl md:text-6xl tracking-[0.03em] mb-6 section-title">
-          Με την παρουσία σας θα μας τιμήσετε ιδιαίτερα
+          Η παρουσία σας είναι το πιο όμορφο δώρο
         </h2>
 
-        <p class="text-lg leading-relaxed max-w-2xl mx-auto mb-8 body-copy">
-          Η παρουσία σας στη μέρα μας είναι το πιο σημαντικό δώρο.
+        <p class="text-xl leading-relaxed max-w-2xl mx-auto mb-8 body-copy">
+          Η χαρά μας θα είναι να σας έχουμε κοντά μας αυτή την ιδιαίτερη ημέρα.
           Για όσους επιθυμούν προαιρετικά να μας τιμήσουν και με μια οικονομική συνεισφορά,
-          βρείτε εδώ το IBAN.
+          θα βρείτε εδώ τα στοιχεία του λογαριασμού.
         </p>
 
-        <div class="inline-block bg-white/45 rounded-[28px] px-8 py-6 shadow-soft border border-white/60 min-w-[280px]">
-          <p class="text-xs uppercase tracking-[0.22em] mb-2">IBAN</p>
-          <p class="text-lg font-medium tracking-wide body-copy">Θα προστεθεί μόλις μου το στείλεις</p>
+        <div class="inline-block info-card rounded-[28px] px-8 py-6 min-w-[280px]">
+          <p class="text-[13px] uppercase tracking-[0.22em] mb-2 section-kicker">IBAN</p>
+          <p class="text-xl font-medium tracking-wide body-copy">Θα προστεθεί σύντομα</p>
         </div>
+      </div>
+    </section>
+
+    <section class="px-6 pb-10">
+      <div class="site-panel max-w-3xl mx-auto text-center">
+        <p class="closing-note">
+          Ανυπομονούμε να μοιραστούμε αυτή την ημέρα μαζί σας.
+        </p>
       </div>
     </section>
   </main>
@@ -177,10 +221,21 @@
   <footer class="py-6 text-center px-6">
     <div class="site-panel max-w-3xl mx-auto">
       <p class="site-footer-names mb-2">Γιάννης &amp; Κατερίνα</p>
-      <p class="text-sm tracking-[0.40em] uppercase">
+      <p class="text-sm tracking-[0.18em] uppercase footer-meta">
         29 Αυγούστου 2026 · Κτήμα Κλεοπάτρα
       </p>
     </div>
   </footer>
+
+  <div class="mobile-rsvp-bar md:hidden">
+    <a
+      href="https://kateravr-bot.github.io/wedding-site/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="mobile-rsvp-button"
+    >
+      RSVP
+    </a>
+  </div>
 </body>
 </html>
