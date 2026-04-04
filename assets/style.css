@@ -4,11 +4,18 @@
   --stone: #6a6661;
   --stone-dark: #55514d;
   --line: rgba(99, 92, 86, 0.14);
-  --shadow: rgba(76, 67, 58, 0.1);
+  --shadow: rgba(76, 67, 58, 0.08);
 }
 
 * {
   box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
 }
 
 html {
@@ -16,11 +23,11 @@ html {
 }
 
 body {
-  margin: 0;
-  min-height: 100vh;
+  min-height: 100svh;
+  overflow: hidden;
   background: linear-gradient(180deg, #f4f3ef 0%, #ece9e3 100%);
   color: var(--stone-dark);
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: Calibri, Candara, 'Segoe UI', Arial, sans-serif;
 }
 
 img {
@@ -34,36 +41,38 @@ a {
 }
 
 .page-shell {
-  width: min(100%, 1120px);
-  margin: 0 auto;
-  padding: 24px 20px 36px;
+  width: 100%;
+  min-height: 100svh;
+  height: 100svh;
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
 }
 
 .hero-image-panel {
-  border-radius: 28px 28px 0 0;
+  min-height: 0;
   overflow: hidden;
-  box-shadow: 0 18px 46px var(--shadow);
+  background: var(--paper);
 }
 
 .hero-image {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  height: 100%;
   object-fit: cover;
+  object-position: center center;
   background: var(--paper);
 }
 
 .details-panel {
-  background: rgba(247, 246, 242, 0.97);
-  border: 1px solid rgba(99, 92, 86, 0.08);
-  border-top: none;
-  border-radius: 0 0 28px 28px;
-  box-shadow: 0 18px 46px var(--shadow);
+  background: rgba(247, 246, 242, 0.98);
+  border-top: 1px solid rgba(99, 92, 86, 0.08);
+  box-shadow: 0 -10px 28px var(--shadow);
 }
 
 .details-inner {
-  width: min(100%, 760px);
+  width: 100%;
+  max-width: 920px;
   margin: 0 auto;
-  padding: 42px 24px 46px;
+  padding: 1.15rem 1.25rem 1.35rem;
   text-align: center;
 }
 
@@ -72,45 +81,43 @@ a {
 .event-location,
 .iban-label {
   margin: 0;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: Calibri, Candara, 'Segoe UI', Arial, sans-serif;
   color: var(--stone);
+  font-weight: 400;
 }
 
 .event-date {
-  font-size: clamp(2.1rem, 4vw, 3.2rem);
+  font-size: clamp(1.7rem, 2.6vw, 2.55rem);
   line-height: 1.08;
-  font-weight: 600;
 }
 
 .event-time {
-  margin-top: 10px;
-  font-size: clamp(1.9rem, 3.2vw, 2.5rem);
-  line-height: 1.1;
-  font-weight: 500;
+  margin-top: 0.3rem;
+  font-size: clamp(1.35rem, 2vw, 1.95rem);
+  line-height: 1.08;
 }
 
 .event-location {
-  margin-top: 12px;
-  font-size: clamp(1.45rem, 2.2vw, 1.95rem);
-  line-height: 1.2;
-  font-weight: 500;
+  margin-top: 0.35rem;
+  font-size: clamp(1.08rem, 1.55vw, 1.4rem);
+  line-height: 1.15;
 }
 
 .rsvp-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 150px;
-  height: 54px;
-  margin-top: 28px;
-  padding: 0 26px;
+  min-width: 132px;
+  height: 44px;
+  margin-top: 0.9rem;
+  padding: 0 1.25rem;
   border-radius: 999px;
-  border: 1.5px solid rgba(95, 88, 82, 0.6);
+  border: 1.2px solid rgba(95, 88, 82, 0.56);
   background: rgba(255, 255, 255, 0.42);
   color: var(--stone-dark);
-  font-size: 0.86rem;
-  font-weight: 600;
-  letter-spacing: 0.18em;
+  font-size: 0.78rem;
+  font-weight: 400;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   transition: background-color 160ms ease, transform 160ms ease;
 }
@@ -122,49 +129,65 @@ a {
 }
 
 .iban-label {
-  margin-top: 30px;
-  font-size: clamp(1.4rem, 2vw, 1.85rem);
-  line-height: 1.2;
-  font-weight: 600;
+  margin-top: 0.9rem;
+  font-size: clamp(1rem, 1.35vw, 1.25rem);
+  line-height: 1.15;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 900px) {
   .page-shell {
-    padding: 12px 12px 22px;
-  }
-
-  .hero-image-panel {
-    border-radius: 22px 22px 0 0;
-  }
-
-  .details-panel {
-    border-radius: 0 0 22px 22px;
+    grid-template-rows: minmax(0, 1fr) auto;
   }
 
   .details-inner {
-    padding: 28px 18px 34px;
+    padding: 1rem 1rem 1.15rem;
   }
 
   .event-date {
-    font-size: clamp(1.65rem, 7vw, 2.25rem);
+    font-size: clamp(1.35rem, 5.3vw, 2rem);
   }
 
   .event-time {
-    font-size: clamp(1.55rem, 6vw, 2rem);
+    font-size: clamp(1.15rem, 4.5vw, 1.55rem);
   }
 
   .event-location {
-    font-size: clamp(1.18rem, 5vw, 1.55rem);
+    font-size: clamp(0.98rem, 3.8vw, 1.18rem);
   }
 
   .rsvp-button {
-    min-width: 132px;
-    height: 50px;
-    margin-top: 24px;
+    min-width: 122px;
+    height: 42px;
+    margin-top: 0.8rem;
   }
 
   .iban-label {
-    margin-top: 24px;
-    font-size: clamp(1.2rem, 5vw, 1.5rem);
+    font-size: clamp(0.95rem, 3.6vw, 1.1rem);
+    margin-top: 0.8rem;
+  }
+}
+
+@media (max-height: 820px) {
+  .details-inner {
+    padding-top: 0.9rem;
+    padding-bottom: 1rem;
+  }
+
+  .event-date {
+    font-size: clamp(1.35rem, 2.25vw, 2rem);
+  }
+
+  .event-time {
+    font-size: clamp(1.1rem, 1.65vw, 1.55rem);
+  }
+
+  .event-location,
+  .iban-label {
+    font-size: clamp(0.94rem, 1.15vw, 1.08rem);
+  }
+
+  .rsvp-button {
+    height: 40px;
+    margin-top: 0.7rem;
   }
 }
