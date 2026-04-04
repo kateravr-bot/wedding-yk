@@ -8,6 +8,24 @@
   font-display: swap;
 }
 
+:root {
+  --cream: #fff7ef;
+  --ivory: #fffaf5;
+  --warm-overlay: rgba(255, 248, 240, 0.72);
+  --sunflower: #d39b2a;
+  --gold-soft: #e6c9a8;
+  --apricot: #d88c4a;
+  --terracotta: #a75b36;
+  --brown: #5a3e2b;
+  --brown-deep: #4a2f1f;
+  --olive: #7b8463;
+  --body: #4b3728;
+  --card-bg: rgba(255, 245, 235, 0.58);
+  --card-border: rgba(232, 205, 173, 0.78);
+  --shadow: rgba(120, 70, 30, 0.12);
+  --shadow-strong: rgba(120, 70, 30, 0.16);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -20,7 +38,7 @@ body {
   margin: 0;
   min-height: 100vh;
   background: none;
-  color: #1f1b20;
+  color: var(--body);
   position: relative;
   font-family: 'Cormorant Garamond', serif;
 }
@@ -37,7 +55,7 @@ body::after {
   content: "";
   position: fixed;
   inset: 0;
-  background: rgba(255, 255, 255, 0.62);
+  background: var(--warm-overlay);
   z-index: -1;
 }
 
@@ -65,19 +83,19 @@ main > section {
   border: none;
   box-shadow: none;
   border-radius: 0;
-  padding: 2rem 1.25rem;
+  padding: 1.6rem 1.1rem;
 }
 
 @media (min-width: 768px) {
   .site-panel {
-    padding: 2.5rem 2rem;
+    padding: 2.15rem 2rem;
   }
 }
 
 .info-card {
-  background: rgba(255, 255, 255, 0.34);
-  border: 1px solid rgba(255, 255, 255, 0.58);
-  box-shadow: 0 16px 40px rgba(79, 69, 97, 0.08);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: 0 16px 40px var(--shadow);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 }
@@ -85,26 +103,25 @@ main > section {
 .map-wrap,
 .venue-image,
 .shadow-soft {
-  box-shadow: 0 18px 45px rgba(79, 69, 97, 0.1) !important;
+  box-shadow: 0 18px 45px var(--shadow-strong) !important;
 }
 
 .map-wrap {
-  border: 1px solid rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(232, 205, 173, 0.8);
 }
 
 .soft-button {
-  background: rgba(255, 255, 255, 0.38);
+  background: rgba(255, 250, 245, 0.56);
 }
 
 .site-monogram {
   font-family: 'Cormorant Garamond', serif;
-  color: #4f4561;
+  color: var(--terracotta);
   font-size: 1.25rem;
   line-height: 1;
   white-space: nowrap;
   font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  letter-spacing: 0.06em;
 }
 
 .hero-names,
@@ -115,10 +132,10 @@ main > section {
   justify-content: center;
   gap: 0.01em;
   text-align: center;
-  color: #4f4561;
+  color: var(--terracotta);
   text-shadow:
-    0 3px 10px rgba(79, 69, 97, 0.08),
-    0 10px 30px rgba(79, 69, 97, 0.05);
+    0 3px 10px rgba(120, 70, 30, 0.08),
+    0 10px 30px rgba(120, 70, 30, 0.05);
 }
 
 .hero-name-line,
@@ -132,8 +149,8 @@ main > section {
 
 .hero-name-line {
   display: block;
-  font-size: clamp(4.3rem, 9vw, 7.2rem);
-  line-height: 0.96;
+  font-size: clamp(4.5rem, 9.4vw, 7.7rem);
+  line-height: 1.05;
   font-weight: 400;
   letter-spacing: 0.01em;
 }
@@ -144,44 +161,52 @@ main > section {
   line-height: 0.8;
   margin: -0.02em 0 0;
   font-weight: 400;
-  color: #5f536e;
-}
-
-.hero-invite,
-.invitation-message,
-.closing-note {
-  font-family: 'Annie Use Your Telescope', cursive;
-  color: #5f536e;
-  font-weight: 400;
+  color: var(--apricot);
 }
 
 .hero-invite {
-  font-size: clamp(1.8rem, 3vw, 2.7rem);
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: var(--terracotta);
+  font-weight: 500;
+  font-size: clamp(1.9rem, 3vw, 2.8rem);
   line-height: 1.1;
   margin-bottom: 0.8rem;
 }
 
 .invitation-message {
+  font-family: 'Cormorant Garamond', serif;
+  color: var(--body);
+  font-weight: 500;
   font-size: clamp(1.35rem, 2.1vw, 1.9rem);
   line-height: 1.45;
   letter-spacing: 0.01em;
 }
 
+.closing-note {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: var(--terracotta);
+  font-weight: 500;
+  font-size: clamp(1.95rem, 3.2vw, 3rem);
+  line-height: 1.15;
+}
+
 .hero-invite-small {
-  font-size: clamp(1.35rem, 2vw, 1.75rem);
+  font-size: clamp(1.45rem, 2vw, 1.95rem);
 }
 
 .invitation-message-small {
-  font-size: clamp(1.05rem, 1.45vw, 1.3rem);
+  font-size: clamp(1.08rem, 1.45vw, 1.35rem);
   line-height: 1.45;
 }
 
 .hero-meta {
-  color: #4a3f4d;
+  color: var(--brown);
 }
 
 .hero-meta-large {
-  letter-spacing: 0.16em;
+  letter-spacing: 0.06em;
 }
 
 .hero-date {
@@ -189,7 +214,7 @@ main > section {
   font-size: clamp(1.4rem, 2.4vw, 2rem);
   line-height: 1.2;
   font-weight: 700;
-  color: #5a4c67;
+  color: var(--brown);
 }
 
 .hero-venue {
@@ -197,7 +222,7 @@ main > section {
   font-size: clamp(1.5rem, 2.8vw, 2.3rem);
   line-height: 1.2;
   font-weight: 700;
-  color: #4f4561;
+  color: var(--brown-deep);
 }
 
 .site-footer-names {
@@ -210,7 +235,7 @@ h1,
 h2,
 h3 {
   font-family: 'Cormorant Garamond', serif;
-  color: #6c5379;
+  color: var(--brown);
   font-weight: 600;
 }
 
@@ -223,15 +248,15 @@ nav,
 }
 
 p {
-  color: #2c2530;
+  color: var(--body);
 }
 
 p.uppercase,
 .section-kicker,
 .hero-kicker {
-  color: #8b6c97;
+  color: var(--sunflower);
   font-weight: 600;
-  letter-spacing: 0.24em;
+  letter-spacing: 0.08em;
 }
 
 .text-sm,
@@ -240,7 +265,7 @@ p.uppercase,
 }
 
 header nav a {
-  color: #7a6c73 !important;
+  color: var(--brown) !important;
   font-weight: 600;
 }
 
@@ -250,19 +275,13 @@ header nav a:hover {
 
 a[class*="rounded-full"],
 button {
-  letter-spacing: 0.12em;
+  letter-spacing: 0.06em;
   font-weight: 600;
 }
 
 .footer-meta,
 footer p:last-child {
-  color: #5b4e5c;
-}
-
-.closing-note {
-  font-size: clamp(1.8rem, 3.2vw, 2.8rem);
-  line-height: 1.15;
-  color: #594c68;
+  color: var(--terracotta);
 }
 
 .mobile-rsvp-bar {
@@ -272,10 +291,10 @@ footer p:last-child {
   bottom: 0;
   z-index: 60;
   padding: 0.9rem 1rem calc(0.9rem + env(safe-area-inset-bottom));
-  background: linear-gradient(to top, rgba(250, 245, 241, 0.96), rgba(250, 245, 241, 0.78));
+  background: linear-gradient(to top, rgba(255, 247, 239, 0.97), rgba(255, 247, 239, 0.84));
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border-top: 1px solid rgba(185, 166, 146, 0.35);
+  border-top: 1px solid rgba(214, 177, 130, 0.45);
 }
 
 .mobile-rsvp-button {
@@ -285,13 +304,12 @@ footer p:last-child {
   width: 100%;
   padding: 0.95rem 1.25rem;
   border-radius: 9999px;
-  background: #bda88c;
-  color: #ffffff;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
+  background: var(--sunflower);
+  color: #fffaf2;
+  letter-spacing: 0.08em;
   font-size: 0.95rem;
   font-weight: 600;
-  box-shadow: 0 14px 32px rgba(79, 69, 97, 0.18);
+  box-shadow: 0 14px 32px rgba(120, 70, 30, 0.18);
 }
 
 @media (max-width: 767px) {
@@ -301,21 +319,21 @@ footer p:last-child {
 
   .site-monogram {
     font-size: 1rem;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.05em;
   }
 
   .hero-name-line {
-    font-size: clamp(3.3rem, 13vw, 5rem);
-    line-height: 0.98;
+    font-size: clamp(3.5rem, 13vw, 5.2rem);
+    line-height: 1.05;
   }
 
   .hero-amp {
     font-size: clamp(2rem, 7vw, 3rem);
-    line-height: 0.85;
+    line-height: 0.9;
   }
 
   .hero-invite {
-    font-size: clamp(1.55rem, 7vw, 2.1rem);
+    font-size: clamp(1.6rem, 7vw, 2.2rem);
   }
 
   .invitation-message {
@@ -324,11 +342,11 @@ footer p:last-child {
   }
 
   .hero-invite-small {
-    font-size: clamp(1.2rem, 5.2vw, 1.5rem);
+    font-size: clamp(1.25rem, 5.2vw, 1.6rem);
   }
 
   .invitation-message-small {
-    font-size: clamp(0.98rem, 4.3vw, 1.15rem);
+    font-size: clamp(1rem, 4.3vw, 1.18rem);
     line-height: 1.4;
   }
 
@@ -346,10 +364,10 @@ footer p:last-child {
   }
 
   .closing-note {
-    font-size: clamp(1.45rem, 7vw, 2rem);
+    font-size: clamp(1.55rem, 7vw, 2.15rem);
   }
 
   .site-panel {
-    padding: 1.5rem 1rem;
+    padding: 1.25rem 1rem;
   }
 }
