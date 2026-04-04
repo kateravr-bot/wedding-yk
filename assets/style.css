@@ -1,13 +1,3 @@
-@font-face {
-  font-family: 'Amsterline';
-  src:
-    local('Amsterline'),
-    url('./Amsterline.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
 :root {
   --cream: #fff7ef;
   --ivory: #fffaf5;
@@ -139,11 +129,12 @@ p {
 
 .page-shell {
   position: relative;
+  height: 100svh;
   min-height: 100svh;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  gap: 0.85rem;
-  padding: 0.9rem 1rem 0.8rem;
+  gap: 0.6rem;
+  padding: 0.7rem 0.85rem 0.6rem;
   overflow: hidden;
 }
 
@@ -158,8 +149,8 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
-  padding: 0.55rem 0.85rem;
+  gap: 0.65rem;
+  padding: 0.42rem 0.72rem;
   border: 1px solid rgba(232, 205, 173, 0.7);
   border-radius: 9999px;
   background: rgba(255, 247, 239, 0.62);
@@ -180,7 +171,7 @@ p {
 .top-nav {
   display: flex;
   align-items: center;
-  gap: 1.2rem;
+  gap: 0.95rem;
   flex-wrap: wrap;
 }
 
@@ -195,7 +186,7 @@ p {
   min-height: 0;
   display: grid;
   grid-template-columns: minmax(0, 1.02fr) minmax(0, 1fr);
-  gap: 0.9rem;
+  gap: 0.65rem;
   align-items: stretch;
 }
 
@@ -214,11 +205,11 @@ p {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  padding: 1.25rem 1.35rem;
+  padding: 1.05rem 1.15rem;
 }
 
 .compact-card {
-  padding: 1rem 1.05rem;
+  padding: 0.88rem 0.94rem;
 }
 
 .info-card {
@@ -252,25 +243,27 @@ p {
 
 .hero-name-line,
 .site-footer-names {
-  font-family: 'Amsterline', 'Times New Roman', serif;
+  font-family: 'Great Vibes', 'Allura', cursive;
 }
 
 .hero-name-line {
   display: block;
-  font-size: clamp(3.7rem, 6vw, 5.4rem);
-  line-height: 0.98;
+  font-size: clamp(4.15rem, 6.1vw, 5.85rem);
+  line-height: 0.9;
   font-weight: 400;
   letter-spacing: 0.01em;
 }
 
+
 .hero-amp {
   display: block;
-  font-size: clamp(1.75rem, 2.2vw, 2.2rem);
-  line-height: 0.8;
-  margin: 0.08rem 0;
+  font-size: clamp(1.55rem, 2vw, 2.05rem);
+  line-height: 0.65;
+  margin: -0.02rem 0 0.08rem;
   font-weight: 400;
   color: var(--apricot);
 }
+
 
 .hero-invite {
   font-style: italic;
@@ -323,7 +316,7 @@ p {
 }
 
 .hero-divider {
-  margin: 1rem auto 0;
+  margin: 0.8rem auto 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -352,7 +345,7 @@ p {
 }
 
 .hero-meta-stack {
-  margin-top: 1rem;
+  margin-top: 0.75rem;
   display: grid;
   gap: 0.15rem;
 }
@@ -374,12 +367,12 @@ p {
 .hero-actions,
 .action-grid {
   display: grid;
-  gap: 0.75rem;
+  gap: 0.6rem;
 }
 
 .hero-actions {
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  margin-top: 1rem;
+  margin-top: 0.75rem;
 }
 
 .primary-button,
@@ -387,8 +380,8 @@ p {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 2.9rem;
-  padding: 0.75rem 1rem;
+  min-height: 2.65rem;
+  padding: 0.64rem 0.92rem;
   border-radius: 9999px;
   font-size: 0.82rem;
   font-weight: 700;
@@ -417,14 +410,14 @@ p {
 .content-column {
   min-height: 0;
   display: grid;
-  grid-template-rows: auto auto auto auto;
-  gap: 0.75rem;
+  grid-template-rows: auto auto;
+  gap: 0.6rem;
 }
 
 .compact-heading-row {
   display: grid;
   gap: 0.25rem;
-  margin-bottom: 0.7rem;
+  margin-bottom: 0.55rem;
 }
 
 .compact-heading-space {
@@ -445,7 +438,7 @@ p {
 .venue-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.06fr) minmax(0, 0.94fr);
-  gap: 0.8rem;
+  gap: 0.65rem;
   align-items: center;
 }
 
@@ -475,7 +468,7 @@ p {
 }
 
 .compact-venue-image {
-  height: 8.3rem;
+  height: 7.2rem;
   width: 100%;
   object-fit: cover;
   border-radius: 1.2rem;
@@ -560,20 +553,27 @@ p {
 .site-bottom {
   display: grid;
   justify-items: center;
-  gap: 0.12rem;
+  gap: 0.08rem;
   text-align: center;
-  padding-bottom: 0.1rem;
+  padding-bottom: 0.05rem;
 }
 
 .site-footer-names {
-  font-size: 2rem;
-  line-height: 0.95;
+  font-size: 2.15rem;
+  line-height: 0.88;
 }
 
 .footer-meta {
   color: var(--terracotta);
   letter-spacing: 0.07em;
-  font-size: 0.78rem;
+  font-size: 0.76rem;
+}
+
+.footer-note {
+  color: var(--terracotta);
+  font-style: italic;
+  font-size: 0.86rem;
+  line-height: 1.1;
 }
 
 @media (max-width: 1023px) {
@@ -642,13 +642,23 @@ p {
   }
 
   .hero-name-line {
-    font-size: clamp(3.2rem, 15vw, 4.7rem);
-    line-height: 1.02;
-  }
+  display: block;
+  font-size: clamp(4.15rem, 6.1vw, 5.85rem);
+  line-height: 0.9;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
 
   .hero-amp {
-    font-size: clamp(1.75rem, 8vw, 2.5rem);
-  }
+  display: block;
+  font-size: clamp(1.55rem, 2vw, 2.05rem);
+  line-height: 0.65;
+  margin: -0.02rem 0 0.08rem;
+  font-weight: 400;
+  color: var(--apricot);
+}
+
 
   .hero-invite {
     font-size: clamp(1.2rem, 5.8vw, 1.55rem);
@@ -679,7 +689,7 @@ p {
   }
 
   .compact-map-wrap iframe {
-    height: 210px;
+    height: 190px;
   }
 
   .compact-title {
@@ -702,7 +712,11 @@ p {
   }
 
   .site-footer-names {
-    font-size: 1.8rem;
+    font-size: 2rem;
+  }
+
+  .footer-note {
+    font-size: 0.82rem;
   }
 
   .footer-meta {
@@ -734,8 +748,13 @@ p {
   }
 
   .hero-name-line {
-    font-size: clamp(3.35rem, 5vw, 4.7rem);
-  }
+  display: block;
+  font-size: clamp(4.15rem, 6.1vw, 5.85rem);
+  line-height: 0.9;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
 
   .hero-invite {
     font-size: 1.12rem;
@@ -799,7 +818,7 @@ p {
   }
 
   .compact-map-wrap iframe {
-    height: 145px;
+    height: 128px;
   }
 
   .primary-button,
@@ -810,10 +829,28 @@ p {
   }
 
   .site-footer-names {
-    font-size: 1.72rem;
+    font-size: 1.92rem;
+  }
+
+  .footer-note {
+    font-size: 0.76rem;
   }
 
   .footer-meta {
     font-size: 0.68rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    overflow: hidden;
+  }
+
+  .top-nav a {
+    font-size: 0.82rem;
+  }
+
+  .footer-note {
+    max-width: 26rem;
   }
 }
