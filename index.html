@@ -3,106 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Γιάννης & Κατερίνα | Γάμος & Ονοματοδοσία</title>
+  <title>Κατερίνα &amp; Γιάννης | Γάμος &amp; Ονοματοδοσία</title>
   <meta
     name="description"
-    content="Πρόσκληση για τον γάμο μας και την ονοματοδοσία του γιου μας στο Κτήμα Κλεοπάτρα."
+    content="Μονοσέλιδη πρόσκληση για τον γάμο του Γιάννη και της Κατερίνας και την ονοματοδοσία του γιου τους."
   />
 
-  <script src="https://cdn.tailwindcss.com"></script>
-
   <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&display=swap"
+    href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Inter:wght@400;500;600&display=swap"
     rel="stylesheet"
   />
 
   <link rel="stylesheet" href="assets/style.css" />
 </head>
+<body>
+  <main class="invitation-page">
+    <section class="hero-panel" aria-label="Κεντρική πρόσκληση">
+      <div class="marble-overlay"></div>
+      <div class="gold-accent gold-accent-top" aria-hidden="true"></div>
+      <div class="gold-accent gold-accent-bottom" aria-hidden="true"></div>
+      <div class="paper-lines" aria-hidden="true"></div>
 
-<body class="antialiased">
-  <div class="page-shell" id="top">
-    <div class="hero-cinematic-layer" aria-hidden="true"></div>
-    <div class="hero-vignette-layer" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="eyebrow">ΓΑΜΟΣ &amp; ΟΝΟΜΑΤΟΔΟΣΙΑ</p>
+        <h1 class="hero-title">ΚΑΤΕΡΙΝΑ &amp; ΓΙΑΝΝΗΣ</h1>
+        <p class="hero-subtitle">Σας προσκαλούμε με χαρά σε μια βραδιά που θα θέλαμε να μοιραστούμε μαζί σας.</p>
+      </div>
+    </section>
 
-    <div class="hero-floral hero-floral-left" aria-hidden="true">
-      <svg viewBox="0 0 280 420" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M116 402C137 323 165 263 203 221C228 193 250 163 254 127C258 94 243 63 219 48C193 32 159 41 143 70C129 95 128 123 137 149C146 175 164 198 183 217" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/>
-        <path d="M160 112C145 118 135 132 135 149C149 144 158 132 160 112Z" fill="currentColor"/>
-        <path d="M182 153C165 155 151 165 145 181C161 179 175 170 182 153Z" fill="currentColor"/>
-        <path d="M202 190C185 191 169 200 159 214C176 215 191 205 202 190Z" fill="currentColor"/>
-        <path d="M108 205C125 205 140 213 149 227C132 230 116 221 108 205Z" fill="currentColor"/>
-        <path d="M95 256C112 253 129 259 141 271C125 276 108 271 95 256Z" fill="currentColor"/>
-        <circle cx="68" cy="108" r="15" fill="currentColor"/>
-        <path d="M68 78C72 90 82 100 95 104C83 108 73 118 68 131C64 119 54 108 41 104C54 99 64 89 68 78Z" fill="currentColor"/>
-        <circle cx="64" cy="106" r="4.8" fill="#7A4B21"/>
-      </svg>
-    </div>
+    <section class="details-panel" aria-label="Στοιχεία εκδήλωσης">
+      <div class="details-inner">
+        <p class="event-date">Σάββατο, 29 Αυγούστου 2026</p>
+        <p class="event-location">Κτήμα Κλεοπάτρα · Κορωπί</p>
+        <p class="event-note">Γάμος, ονοματοδοσία και δεξίωση στον ίδιο χώρο</p>
 
-    <div class="hero-floral hero-floral-right" aria-hidden="true">
-      <svg viewBox="0 0 280 420" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M162 405C141 326 113 266 75 224C50 196 28 166 24 130C20 97 35 66 59 51C85 35 119 44 135 73C149 98 150 126 141 152C132 178 114 201 95 220" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/>
-        <path d="M118 113C133 119 143 133 143 150C129 145 120 133 118 113Z" fill="currentColor"/>
-        <path d="M96 154C113 156 127 166 133 182C117 180 103 171 96 154Z" fill="currentColor"/>
-        <path d="M76 191C93 192 109 201 119 215C102 216 87 206 76 191Z" fill="currentColor"/>
-        <path d="M170 206C153 206 138 214 129 228C146 231 162 222 170 206Z" fill="currentColor"/>
-        <path d="M183 257C166 254 149 260 137 272C153 277 170 272 183 257Z" fill="currentColor"/>
-        <circle cx="210" cy="120" r="18" fill="currentColor"/>
-        <path d="M210 82C215 96 228 108 243 113C228 118 216 130 210 145C205 130 193 118 178 113C193 108 205 96 210 82Z" fill="currentColor"/>
-        <circle cx="207" cy="118" r="5.5" fill="#7A4B21"/>
-      </svg>
-    </div>
-
-    <header class="site-topbar">
-      <a href="#top" class="site-monogram">Γ &amp; Κ</a>
-
-      <nav class="top-nav" aria-label="Πλοήγηση πρόσκλησης">
-        <a href="#venue">Κτήμα</a>
-        <a href="#rsvp">RSVP</a>
-        <a href="#gift">Δώρο</a>
-      </nav>
-    </header>
-
-    <main class="onepage-main">
-      <section id="invitation" class="hero-card compact-panel">
-        <p class="hero-kicker text-[14px] md:text-[15px] mb-4">Γάμος &amp; Ονοματοδοσία</p>
-
-        <h1 class="hero-names mb-4">
-          <span class="hero-name-line">Γιάννης</span>
-          <span class="hero-amp">&amp;</span>
-          <span class="hero-name-line">Κατερίνα</span>
-        </h1>
-
-        <p class="hero-invite hero-invite-small mb-3">σας προσκαλούμε με χαρά</p>
-
-        <p class="invitation-message invitation-message-small hero-copy mx-auto">
-          στον γάμο μας και στην ονοματοδοσία του γιου μας,
-          σε μια βραδιά που θα θέλαμε να μοιραστούμε μαζί σας.
-        </p>
-
-        <div class="hero-divider" aria-hidden="true">
-          <span class="hero-divider-line"></span>
-          <span class="hero-divider-flower">
-            <svg viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg" fill="none">
-              <circle cx="22" cy="22" r="5.5" fill="#6B4729"/>
-              <path d="M22 5C24.8 11.6 30.4 17.2 37 20C30.4 22.8 24.8 28.4 22 35C19.2 28.4 13.6 22.8 7 20C13.6 17.2 19.2 11.6 22 5Z" fill="#DCA52D"/>
-              <path d="M39 22C32.4 24.8 26.8 30.4 24 37C21.2 30.4 15.6 24.8 9 22C15.6 19.2 21.2 13.6 24 7C26.8 13.6 32.4 19.2 39 22Z" fill="#F0C85D" fill-opacity="0.92"/>
-            </svg>
-          </span>
-          <span class="hero-divider-line"></span>
-        </div>
-
-        <div class="hero-meta hero-meta-large hero-meta-stack">
-          <p class="hero-date">Σάββατο 29 Αυγούστου 2026</p>
-          <p class="hero-date">19:00</p>
-          <p class="hero-venue">Κτήμα Κλεοπάτρα · Κορωπί</p>
-        </div>
-
-        <div class="hero-actions">
+        <div class="button-row">
           <a
             href="https://kateravr-bot.github.io/wedding-site/"
             target="_blank"
             rel="noopener noreferrer"
-            class="primary-button"
+            class="outline-button"
           >
             RSVP
           </a>
@@ -111,83 +51,28 @@
             href="https://www.ktimakleopatra.gr/ktima/"
             target="_blank"
             rel="noopener noreferrer"
-            class="secondary-button"
+            class="ghost-link"
           >
             Το Κτήμα
           </a>
         </div>
-      </section>
 
-      <section class="content-column" aria-label="Πληροφορίες εκδήλωσης">
-        <section id="venue" class="info-card compact-card venue-card">
-          <div class="compact-heading-row">
-            <p class="section-kicker compact-kicker">Η Τοποθεσία</p>
-            <h2 class="compact-title">Κτήμα Κλεοπάτρα</h2>
+        <div class="meta-row">
+          <div class="meta-card">
+            <span class="meta-label">Ώρα</span>
+            <span class="meta-value">19:00</span>
           </div>
-
-          <div class="venue-grid">
-            <div class="venue-copy">
-              <p class="venue-label">Διεύθυνση</p>
-              <p class="venue-address">Θεμιστοκλέους 7, Οικισμός Αγίου Ιωάννη, Κορωπί</p>
-              <p class="venue-note">Το κτήμα διαθέτει άνετη πρόσβαση και χώρο στάθμευσης για τους καλεσμένους.</p>
-            </div>
-
-            <img
-              src="https://www.ktimakleopatra.gr/wp-content/uploads/2024/11/ktima-gamou-kleopatra-1-e1731666737147-768x512.webp"
-              alt="Κτήμα Κλεοπάτρα εξωτερικός χώρος"
-              class="venue-image compact-venue-image"
-              loading="lazy"
-            />
+          <div class="meta-card">
+            <span class="meta-label">RSVP έως</span>
+            <span class="meta-value">20 / 07</span>
           </div>
-
-          <div class="map-wrap compact-map-wrap">
-            <iframe
-              src="https://maps.google.com/maps?q=Ktima+Kleopatra+%CE%98%CE%B5%CE%BC%CE%B9%CF%83%CF%84%CE%BF%CE%BA%CE%BB%CE%AD%CE%BF%CF%85%CF%82+7+%CE%9A%CE%BF%CF%81%CF%89%CF%80%CE%AF&output=embed&hl=el"
-              width="100%"
-              height="150"
-              style="border:0"
-              allowfullscreen
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              title="Χάρτης Κτήμα Κλεοπάτρα"
-            ></iframe>
+          <div class="meta-card">
+            <span class="meta-label">IBAN</span>
+            <span class="meta-value">Θα προστεθεί σύντομα</span>
           </div>
-        </section>
-
-        <div class="action-grid">
-          <section id="rsvp" class="info-card compact-card action-card">
-            <p class="section-kicker compact-kicker">RSVP</p>
-            <h2 class="compact-title compact-title-small">Επιβεβαίωση Παρουσίας</h2>
-            <p class="action-copy">Θα χαρούμε πολύ να μας ενημερώσετε για την παρουσία σας έως τις 20/07.</p>
-            <a
-              href="https://kateravr-bot.github.io/wedding-site/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="primary-button small-button"
-            >
-              Μετάβαση στο RSVP
-            </a>
-          </section>
-
-          <section id="gift" class="info-card compact-card action-card">
-            <p class="section-kicker compact-kicker">Προαιρετικό Δώρο</p>
-            <h2 class="compact-title compact-title-small">Η παρουσία σας είναι το πιο όμορφο δώρο</h2>
-            <p class="action-copy">Για όσους επιθυμούν προαιρετικά να μας τιμήσουν με μια οικονομική συνεισφορά, τα στοιχεία του λογαριασμού θα προστεθούν σύντομα.</p>
-            <div class="gift-box">
-              <span class="gift-label">IBAN</span>
-              <span class="gift-value">Θα προστεθεί σύντομα</span>
-            </div>
-          </section>
         </div>
-
-      </section>
-    </main>
-
-    <footer class="site-bottom">
-      <p class="site-footer-names">Γιάννης &amp; Κατερίνα</p>
-      <p class="footer-meta">29 Αυγούστου 2026 · Κτήμα Κλεοπάτρα</p>
-      <p class="footer-note">Ανυπομονούμε να μοιραστούμε αυτή την ημέρα μαζί σας.</p>
-    </footer>
-  </div>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
