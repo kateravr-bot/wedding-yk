@@ -121,13 +121,6 @@ a {
   transform: translateY(-1px);
 }
 
-.iban-label {
-  margin-top: 30px;
-  font-size: clamp(1.4rem, 2vw, 1.85rem);
-  line-height: 1.2;
-  font-weight: 400;
-}
-
 @media (max-width: 720px) {
   .page-shell {
     padding: 12px 12px 22px;
@@ -163,8 +156,24 @@ a {
     margin-top: 24px;
   }
 
-  .iban-label {
-    margin-top: 24px;
-    font-size: clamp(1.2rem, 5vw, 1.5rem);
-  }
+  .event-message {
+  margin-top: 28px;
+}
+
+.event-message p {
+  margin: 0;
+  font-family: Calibri, Candara, 'Segoe UI', Arial, sans-serif;
+  color: var(--stone);
+  font-size: clamp(1.12rem, 1.7vw, 1.45rem);
+  line-height: 1.45;
+  font-weight: 400;
+}
+
+.event-message p + p {
+  margin-top: 10px;
+}
+
+.gift-message {
+  margin-top: 28px;
+}
 }
