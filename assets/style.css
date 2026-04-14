@@ -1,8 +1,10 @@
+/* === FINAL CLEAN VERSION === */
+
 :root {
   --bg: #ffffff;
-  --button-border: rgba(95, 88, 82, 0.65);
-  --button-bg: rgba(255, 255, 255, 0.82);
-  --button-bg-hover: rgba(255, 255, 255, 0.96);
+  --button-border: rgba(95, 88, 82, 0.6);
+  --button-bg: rgba(255, 255, 255, 0.85);
+  --button-bg-hover: rgba(255, 255, 255, 0.95);
   --button-text: #4e4944;
   --gift-text: #57504a;
   --venue-indicator: rgba(120, 112, 104, 0.55);
@@ -13,60 +15,41 @@
   box-sizing: border-box;
 }
 
-html,
-body {
+html, body {
   margin: 0;
   padding: 0;
-  background: var(--bg);
+  background: #ffffff;
   overflow-x: hidden;
 }
 
 body {
-  min-height: 100vh;
-  font-family: "Montserrat", Calibri, Candara, "Segoe UI", Arial, sans-serif;
+  font-family: "Montserrat", Arial, sans-serif;
 }
 
-img {
-  display: block;
-  max-width: 100%;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
+/* === LAYOUT === */
 
 .invitation-stage {
-  width: 100%;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  background: #ffffff;
 }
 
 .invitation-card {
   position: relative;
-  width: min(100vw, 1000px);
-  line-height: 0;
+  width: min(100vw, 900px);
 }
 
 .invitation-image {
   width: 100%;
-  height: auto;
   display: block;
 }
+
+/* === RSVP + IBAN === */
 
 .overlay-actions {
   position: absolute;
   left: 50%;
-  bottom: 14.2%;
+  bottom: 15%;
   transform: translateX(-50%);
-  width: min(52%, 420px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  line-height: 1.2;
   text-align: center;
 }
 
@@ -74,122 +57,75 @@ a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 158px;
-  height: 52px;
-  padding: 0 28px;
+  min-width: 120px;
+  height: 42px;
+  padding: 0 18px;
   border-radius: 999px;
   border: 1.4px solid var(--button-border);
   background: var(--button-bg);
   color: var(--button-text);
-  font-size: 0.92rem;
-  font-weight: 600;
-  letter-spacing: 0.18em;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  transition: background-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
-  box-shadow: 0 8px 24px rgba(70, 58, 46, 0.08);
+  cursor: pointer;
 }
 
-.rsvp-button:hover,
-.rsvp-button:focus-visible {
+.rsvp-button:hover {
   background: var(--button-bg-hover);
-  transform: translateY(-1px);
-  box-shadow: 0 10px 28px rgba(70, 58, 46, 0.12);
 }
 
 .gift-note {
-  margin: 0;
+  margin-top: 6px;
+  font-size: 0.9rem;
   color: var(--gift-text);
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: clamp(1.2rem, 1.95vw, 1.7rem);
-  font-style: italic;
-  font-weight: 500;
-  letter-spacing: 0.01em;
-  line-height: 1.1;
 }
+
+/* === CLICKABLE LOCATION === */
 
 .location-hotspot {
   position: absolute;
   left: 50%;
-  top: 39.1%;
+  top: 39%;
   transform: translateX(-50%);
-  width: 31.5%;
-  height: 4.7%;
-  border-radius: 999px;
-  background: transparent;
-  cursor: pointer;
+  width: 32%;
+  height: 5%;
 }
 
+/* subtle underline */
 .location-hotspot::after {
   content: "";
   position: absolute;
-  left: 9%;
-  right: 9%;
-  bottom: 12%;
+  left: 10%;
+  right: 10%;
+  bottom: 15%;
   height: 1px;
   background: var(--venue-indicator);
-  transition: background-color 160ms ease, transform 160ms ease, height 160ms ease;
 }
 
-.location-hotspot:hover::after,
-.location-hotspot:focus-visible::after {
+.location-hotspot:hover::after {
   background: var(--venue-indicator-hover);
-  height: 1.5px;
 }
 
-.location-hotspot:focus-visible {
-  outline: none;
-}
+/* === MOBILE === */
 
-@media (max-width: 900px) {
-  .invitation-card {
-    width: 100vw;
-  }
+@media (max-width: 600px) {
 
   .overlay-actions {
-    bottom: 13.2%;
-    width: 58%;
-    gap: 10px;
+    bottom: 13%;
   }
 
   .rsvp-button {
-    min-width: 148px;
-    height: 50px;
-    font-size: 0.84rem;
+    height: 38px;
+    font-size: 0.65rem;
   }
 
   .gift-note {
-    font-size: clamp(1.05rem, 3vw, 1.4rem);
+    font-size: 0.85rem;
   }
 
   .location-hotspot {
-    top: 39.2%;
-    width: 42%;
-    height: 5.3%;
-  }
-}
-
-@media (max-width: 640px) {
-  .overlay-actions {
-    bottom: 12.4%;
-    width: 66%;
-    gap: 9px;
+    width: 45%;
+    height: 6%;
   }
 
-  .rsvp-button {
-    min-width: 136px;
-    height: 46px;
-    padding: 0 24px;
-    font-size: 0.78rem;
-    letter-spacing: 0.15em;
-  }
-
-  .gift-note {
-    font-size: clamp(1rem, 4.4vw, 1.22rem);
-  }
-
-  .location-hotspot {
-    top: 39.15%;
-    width: 47%;
-    height: 5.8%;
-  }
 }
