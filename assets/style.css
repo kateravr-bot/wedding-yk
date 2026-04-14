@@ -1,29 +1,27 @@
 :root {
-  --page-bg-top: #f6f1e7;
-  --page-bg-bottom: #eee4d1;
-  --text: #5a5147;
-  --text-soft: #7a7064;
-  --button-border: rgba(107, 92, 72, 0.42);
-  --button-bg: rgba(255, 255, 255, 0.7);
-  --button-bg-hover: rgba(255, 255, 255, 0.92);
-  --shadow-soft: 0 16px 40px rgba(78, 64, 46, 0.08);
+  --bg: #ffffff;
+  --button-border: rgba(95, 88, 82, 0.65);
+  --button-bg: rgba(255, 255, 255, 0.82);
+  --button-bg-hover: rgba(255, 255, 255, 0.96);
+  --button-text: #4e4944;
+  --gift-text: #5c5650;
 }
 
 * {
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  overflow-x: hidden;
 }
 
 body {
-  margin: 0;
   min-height: 100vh;
-  background: linear-gradient(180deg, var(--page-bg-top) 0%, var(--page-bg-bottom) 100%);
-  color: var(--text);
   font-family: Calibri, Candara, "Segoe UI", Arial, sans-serif;
-  overflow-x: hidden;
 }
 
 img {
@@ -36,118 +34,143 @@ a {
   text-decoration: none;
 }
 
-.page-shell {
+.invitation-stage {
   width: 100%;
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 28px 20px 56px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: #ffffff;
 }
 
-.invitation-panel {
-  width: 100%;
+.invitation-card {
+  position: relative;
+  width: min(100vw, 1000px);
+  line-height: 0;
 }
 
 .invitation-image {
   width: 100%;
   height: auto;
-  border-radius: 18px;
-  box-shadow: var(--shadow-soft);
+  display: block;
 }
 
-.actions-panel {
-  width: 100%;
-}
-
-.actions-inner {
+.overlay-actions {
+  position: absolute;
+  left: 50%;
+  bottom: 10.5%;
+  transform: translateX(-50%);
+  width: min(52%, 420px);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 0;
-  padding: 28px 10px 0;
+  gap: 16px;
+  line-height: 1.2;
   text-align: center;
-}
-
-.event-location {
-  margin: 0;
-  font-size: clamp(1.05rem, 1.7vw, 1.3rem);
-  line-height: 1.35;
-  color: var(--text-soft);
-}
-
-.location-link {
-  border-bottom: 1px solid transparent;
-  transition: color 160ms ease, border-color 160ms ease, opacity 160ms ease;
-}
-
-.location-link:hover,
-.location-link:focus-visible {
-  color: var(--text);
-  border-bottom-color: rgba(90, 81, 71, 0.45);
-  opacity: 0.95;
 }
 
 .rsvp-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 164px;
+  min-width: 158px;
   height: 52px;
-  margin-top: 22px;
-  padding: 0 30px;
-  border: 1.5px solid var(--button-border);
+  padding: 0 28px;
   border-radius: 999px;
+  border: 1.4px solid var(--button-border);
   background: var(--button-bg);
-  color: var(--text);
+  color: var(--button-text);
   font-size: 0.92rem;
   font-weight: 600;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  box-shadow: 0 8px 24px rgba(78, 64, 46, 0.06);
-  transition: transform 160ms ease, background-color 160ms ease, box-shadow 160ms ease;
+  transition: background-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+  box-shadow: 0 8px 24px rgba(70, 58, 46, 0.08);
 }
 
 .rsvp-button:hover,
 .rsvp-button:focus-visible {
   background: var(--button-bg-hover);
   transform: translateY(-1px);
-  box-shadow: 0 12px 26px rgba(78, 64, 46, 0.1);
+  box-shadow: 0 10px 28px rgba(70, 58, 46, 0.12);
 }
 
-.gift-label {
-  margin: 28px 0 0;
-  font-size: clamp(1rem, 1.5vw, 1.18rem);
-  line-height: 1.35;
-  color: var(--text-soft);
+.gift-note {
+  margin: 0;
+  color: var(--gift-text);
+  font-size: clamp(0.95rem, 1.4vw, 1.22rem);
+  font-weight: 400;
+  letter-spacing: 0.01em;
 }
 
-@media (max-width: 720px) {
-  .page-shell {
-    padding: 16px 12px 40px;
+.location-hotspot {
+  position: absolute;
+  left: 50%;
+  top: 39.1%;
+  transform: translateX(-50%);
+  width: 31.5%;
+  height: 4.7%;
+  border-radius: 999px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.location-hotspot:hover,
+.location-hotspot:focus-visible {
+  outline: 1.5px solid rgba(196, 123, 95, 0.45);
+  outline-offset: 2px;
+  border-radius: 999px;
+}
+
+@media (max-width: 900px) {
+  .invitation-card {
+    width: 100vw;
   }
 
-  .invitation-image {
-    border-radius: 12px;
-  }
-
-  .actions-inner {
-    padding-top: 22px;
-  }
-
-  .event-location {
-    font-size: 1.02rem;
+  .overlay-actions {
+    bottom: 9.8%;
+    width: 58%;
+    gap: 14px;
   }
 
   .rsvp-button {
     min-width: 148px;
     height: 50px;
-    margin-top: 18px;
-    font-size: 0.86rem;
-    letter-spacing: 0.14em;
+    font-size: 0.84rem;
   }
 
-  .gift-label {
-    margin-top: 22px;
-    font-size: 0.98rem;
+  .gift-note {
+    font-size: clamp(0.9rem, 2.8vw, 1.08rem);
+  }
+
+  .location-hotspot {
+    top: 39.2%;
+    width: 42%;
+    height: 5.3%;
+  }
+}
+
+@media (max-width: 640px) {
+  .overlay-actions {
+    bottom: 9.2%;
+    width: 66%;
+    gap: 12px;
+  }
+
+  .rsvp-button {
+    min-width: 136px;
+    height: 46px;
+    padding: 0 24px;
+    font-size: 0.78rem;
+    letter-spacing: 0.15em;
+  }
+
+  .gift-note {
+    font-size: clamp(0.84rem, 3.6vw, 1rem);
+  }
+
+  .location-hotspot {
+    top: 39.15%;
+    width: 47%;
+    height: 5.8%;
   }
 }
