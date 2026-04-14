@@ -1,10 +1,12 @@
 :root {
-  --paper: #f2f1ed;
-  --paper-soft: #f7f6f2;
-  --stone: #6a6661;
-  --stone-dark: #55514d;
-  --line: rgba(99, 92, 86, 0.14);
-  --shadow: rgba(76, 67, 58, 0.1);
+  --page-bg-top: #f6f1e7;
+  --page-bg-bottom: #eee4d1;
+  --text: #5a5147;
+  --text-soft: #7a7064;
+  --button-border: rgba(107, 92, 72, 0.42);
+  --button-bg: rgba(255, 255, 255, 0.7);
+  --button-bg-hover: rgba(255, 255, 255, 0.92);
+  --shadow-soft: 0 16px 40px rgba(78, 64, 46, 0.08);
 }
 
 * {
@@ -18,9 +20,9 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  background: linear-gradient(180deg, #f4f3ef 0%, #ece9e3 100%);
-  color: var(--stone-dark);
-  font-family: Calibri, Candara, 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(180deg, var(--page-bg-top) 0%, var(--page-bg-bottom) 100%);
+  color: var(--text);
+  font-family: Calibri, Candara, "Segoe UI", Arial, sans-serif;
   overflow-x: hidden;
 }
 
@@ -36,153 +38,116 @@ a {
 
 .page-shell {
   width: 100%;
-  max-width: none;
-  margin: 0;
-  padding: 0;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 28px 20px 56px;
 }
 
-.hero-image-panel {
+.invitation-panel {
   width: 100%;
-  border-radius: 0;
-  overflow: hidden;
-  box-shadow: none;
 }
 
-.hero-image {
-  display: block;
+.invitation-image {
   width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  object-position: center top;
-  background: var(--paper);
+  height: auto;
+  border-radius: 18px;
+  box-shadow: var(--shadow-soft);
 }
 
-.details-panel {
+.actions-panel {
   width: 100%;
-  background: rgba(247, 246, 242, 0.97);
-  border: none;
-  border-top: none;
-  border-radius: 0;
-  box-shadow: none;
 }
 
-.details-inner {
-  width: 100%;
-  max-width: none;
-  margin: 0;
-  padding: 32px 20px 34px;
+.actions-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  padding: 28px 10px 0;
   text-align: center;
 }
 
-.event-date,
-.event-time,
 .event-location {
   margin: 0;
-  font-family: Calibri, Candara, 'Segoe UI', Arial, sans-serif;
-  color: var(--stone);
-  font-weight: 400;
+  font-size: clamp(1.05rem, 1.7vw, 1.3rem);
+  line-height: 1.35;
+  color: var(--text-soft);
 }
 
-.event-date {
-  font-size: clamp(2.1rem, 4vw, 3.2rem);
-  line-height: 1.08;
+.location-link {
+  border-bottom: 1px solid transparent;
+  transition: color 160ms ease, border-color 160ms ease, opacity 160ms ease;
 }
 
-.event-time {
-  margin-top: 10px;
-  font-size: clamp(1.9rem, 3.2vw, 2.5rem);
-  line-height: 1.1;
-}
-
-.event-location {
-  margin-top: 12px;
-  font-size: clamp(1.45rem, 2.2vw, 1.95rem);
-  line-height: 1.2;
-}
-
-.event-message {
-  margin-top: 28px;
-}
-
-.event-message p {
-  margin: 0;
-  font-family: Calibri, Candara, 'Segoe UI', Arial, sans-serif;
-  color: var(--stone);
-  font-size: clamp(1.12rem, 1.7vw, 1.45rem);
-  line-height: 1.45;
-  font-weight: 400;
-}
-
-.event-message p + p {
-  margin-top: 10px;
-}
-
-.gift-message {
-  margin-top: 28px;
+.location-link:hover,
+.location-link:focus-visible {
+  color: var(--text);
+  border-bottom-color: rgba(90, 81, 71, 0.45);
+  opacity: 0.95;
 }
 
 .rsvp-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 150px;
-  height: 54px;
-  margin-top: 28px;
-  padding: 0 26px;
+  min-width: 164px;
+  height: 52px;
+  margin-top: 22px;
+  padding: 0 30px;
+  border: 1.5px solid var(--button-border);
   border-radius: 999px;
-  border: 1.5px solid rgba(95, 88, 82, 0.6);
-  background: rgba(255, 255, 255, 0.42);
-  color: var(--stone-dark);
-  font-size: 0.86rem;
+  background: var(--button-bg);
+  color: var(--text);
+  font-size: 0.92rem;
   font-weight: 600;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  transition: background-color 160ms ease, transform 160ms ease;
+  box-shadow: 0 8px 24px rgba(78, 64, 46, 0.06);
+  transition: transform 160ms ease, background-color 160ms ease, box-shadow 160ms ease;
 }
 
 .rsvp-button:hover,
 .rsvp-button:focus-visible {
-  background: rgba(255, 255, 255, 0.74);
+  background: var(--button-bg-hover);
   transform: translateY(-1px);
+  box-shadow: 0 12px 26px rgba(78, 64, 46, 0.1);
+}
+
+.gift-label {
+  margin: 28px 0 0;
+  font-size: clamp(1rem, 1.5vw, 1.18rem);
+  line-height: 1.35;
+  color: var(--text-soft);
 }
 
 @media (max-width: 720px) {
   .page-shell {
-    padding: 0;
+    padding: 16px 12px 40px;
   }
 
-  .hero-image-panel {
-    border-radius: 0;
+  .invitation-image {
+    border-radius: 12px;
   }
 
-  .details-panel {
-    border-radius: 0;
-  }
-
-  .details-inner {
-    padding: 28px 18px 34px;
-  }
-
-  .event-date {
-    font-size: clamp(1.65rem, 7vw, 2.25rem);
-  }
-
-  .event-time {
-    font-size: clamp(1.55rem, 6vw, 2rem);
+  .actions-inner {
+    padding-top: 22px;
   }
 
   .event-location {
-    font-size: clamp(1.18rem, 5vw, 1.55rem);
-  }
-
-  .event-message p {
-    font-size: clamp(1.02rem, 4.6vw, 1.22rem);
-    line-height: 1.4;
+    font-size: 1.02rem;
   }
 
   .rsvp-button {
-    min-width: 132px;
+    min-width: 148px;
     height: 50px;
-    margin-top: 24px;
+    margin-top: 18px;
+    font-size: 0.86rem;
+    letter-spacing: 0.14em;
+  }
+
+  .gift-label {
+    margin-top: 22px;
+    font-size: 0.98rem;
   }
 }
