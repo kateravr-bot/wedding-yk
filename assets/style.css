@@ -4,7 +4,9 @@
   --button-bg: rgba(255, 255, 255, 0.82);
   --button-bg-hover: rgba(255, 255, 255, 0.96);
   --button-text: #4e4944;
-  --gift-text: #5c5650;
+  --gift-text: #57504a;
+  --venue-indicator: rgba(120, 112, 104, 0.55);
+  --venue-indicator-hover: rgba(120, 112, 104, 0.82);
 }
 
 * {
@@ -21,7 +23,7 @@ body {
 
 body {
   min-height: 100vh;
-  font-family: Calibri, Candara, "Segoe UI", Arial, sans-serif;
+  font-family: "Montserrat", Calibri, Candara, "Segoe UI", Arial, sans-serif;
 }
 
 img {
@@ -57,13 +59,13 @@ a {
 .overlay-actions {
   position: absolute;
   left: 50%;
-  bottom: 10.5%;
+  bottom: 14.2%;
   transform: translateX(-50%);
   width: min(52%, 420px);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
   line-height: 1.2;
   text-align: center;
 }
@@ -97,9 +99,12 @@ a {
 .gift-note {
   margin: 0;
   color: var(--gift-text);
-  font-size: clamp(0.95rem, 1.4vw, 1.22rem);
-  font-weight: 400;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(1.2rem, 1.95vw, 1.7rem);
+  font-style: italic;
+  font-weight: 500;
   letter-spacing: 0.01em;
+  line-height: 1.1;
 }
 
 .location-hotspot {
@@ -114,11 +119,25 @@ a {
   cursor: pointer;
 }
 
-.location-hotspot:hover,
+.location-hotspot::after {
+  content: "";
+  position: absolute;
+  left: 9%;
+  right: 9%;
+  bottom: 12%;
+  height: 1px;
+  background: var(--venue-indicator);
+  transition: background-color 160ms ease, transform 160ms ease, height 160ms ease;
+}
+
+.location-hotspot:hover::after,
+.location-hotspot:focus-visible::after {
+  background: var(--venue-indicator-hover);
+  height: 1.5px;
+}
+
 .location-hotspot:focus-visible {
-  outline: 1.5px solid rgba(196, 123, 95, 0.45);
-  outline-offset: 2px;
-  border-radius: 999px;
+  outline: none;
 }
 
 @media (max-width: 900px) {
@@ -127,9 +146,9 @@ a {
   }
 
   .overlay-actions {
-    bottom: 9.8%;
+    bottom: 13.2%;
     width: 58%;
-    gap: 14px;
+    gap: 10px;
   }
 
   .rsvp-button {
@@ -139,7 +158,7 @@ a {
   }
 
   .gift-note {
-    font-size: clamp(0.9rem, 2.8vw, 1.08rem);
+    font-size: clamp(1.05rem, 3vw, 1.4rem);
   }
 
   .location-hotspot {
@@ -151,9 +170,9 @@ a {
 
 @media (max-width: 640px) {
   .overlay-actions {
-    bottom: 9.2%;
+    bottom: 12.4%;
     width: 66%;
-    gap: 12px;
+    gap: 9px;
   }
 
   .rsvp-button {
@@ -165,7 +184,7 @@ a {
   }
 
   .gift-note {
-    font-size: clamp(0.84rem, 3.6vw, 1rem);
+    font-size: clamp(1rem, 4.4vw, 1.22rem);
   }
 
   .location-hotspot {
