@@ -2,7 +2,7 @@
 
 :root {
   --bg: #ffffff;
-  --ink: #1c1c1c;
+  --ink: #1d1d1d;
 }
 
 * {
@@ -49,17 +49,17 @@ a {
   height: auto;
 }
 
-/* === Venue icon next to the printed venue line === */
+/* === Venue icon Î´Î¯Ï€Î»Î± ÏƒÏ„Î¿ ÎšÎŸÎ¡Î©Î Î™ === */
 
 .venue-icon-link {
   position: absolute;
-  top: 53.25%;
-  left: 54.8%;
-  width: 3.8%;
-  min-width: 18px;
-  max-width: 34px;
+  top: 53.45%;
+  left: 56.9%;
+  width: 3.5%;
+  min-width: 17px;
+  max-width: 30px;
   transform: translateY(-50%);
-  opacity: 0.92;
+  opacity: 0.95;
   transition: transform 160ms ease, opacity 160ms ease;
 }
 
@@ -75,31 +75,31 @@ a {
   height: auto;
 }
 
-/* === RSVP at the bottom === */
+/* === RSVP ÏˆÎ·Î»ÏŒÏ„ÎµÏÎ±, ÏƒÏ‡ÎµÎ´ÏŒÎ½ ÎºÎ¬Ï„Ï‰ Î±Ï€ÏŒ Ï„Î·Î½ Ï„ÎµÎ»ÎµÏ…Ï„Î±Î¯Î± Î³ÏÎ±Î¼Î¼Î® === */
 
 .rsvp-inline {
   position: absolute;
-  left: 18%;
-  bottom: 11.2%;
+  left: 13.8%;
+  bottom: 16.2%;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
 
 .rsvp-label {
-  font-family: "Cormorant Garamond", serif;
-  font-style: italic;
-  font-size: clamp(1.55rem, 2.4vw, 2.1rem);
+  font-family: "WindSong", cursive;
+  font-size: clamp(1.45rem, 2.2vw, 2rem);
   line-height: 1;
   color: var(--ink);
-  letter-spacing: 0.01em;
+  letter-spacing: 0;
+  white-space: nowrap;
 }
 
 .rsvp-icon-link {
-  width: 4.4%;
-  min-width: 20px;
-  max-width: 34px;
-  opacity: 0.94;
+  width: 3.9%;
+  min-width: 18px;
+  max-width: 28px;
+  opacity: 0.95;
   transition: transform 160ms ease, opacity 160ms ease;
 }
 
@@ -117,46 +117,46 @@ a {
 
 @media (max-width: 768px) {
   .venue-icon-link {
-    top: 53.35%;
-    left: 55.1%;
-    width: 5.3%;
+    top: 53.55%;
+    left: 57.5%;
+    width: 4.8%;
   }
 
   .rsvp-inline {
-    left: 15.5%;
-    bottom: 10.4%;
-    gap: 8px;
+    left: 12.6%;
+    bottom: 15.7%;
+    gap: 7px;
   }
 
   .rsvp-label {
-    font-size: clamp(1.3rem, 5.1vw, 1.8rem);
+    font-size: clamp(1.15rem, 4vw, 1.55rem);
   }
 
   .rsvp-icon-link {
-    width: 6.6%;
+    width: 5.8%;
   }
 }
 
 @media (max-width: 480px) {
   .venue-icon-link {
-    top: 53.45%;
-    left: 55.6%;
-    width: 6.2%;
-    min-width: 17px;
+    top: 53.62%;
+    left: 58.2%;
+    width: 5.6%;
+    min-width: 16px;
   }
 
   .rsvp-inline {
-    left: 14.2%;
-    bottom: 10%;
-    gap: 7px;
+    left: 11.8%;
+    bottom: 15.25%;
+    gap: 6px;
   }
 
   .rsvp-label {
-    font-size: clamp(1.15rem, 5.6vw, 1.55rem);
+    font-size: clamp(1.02rem, 4.7vw, 1.28rem);
   }
 
   .rsvp-icon-link {
-    width: 7.2%;
-    min-width: 18px;
+    width: 6.4%;
+    min-width: 17px;
   }
 }
