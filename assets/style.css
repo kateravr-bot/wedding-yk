@@ -1,24 +1,19 @@
-/* === FINAL CLEAN VERSION === */
+/* === GitHub invitation layout === */
 
 :root {
   --bg: #ffffff;
-  --button-border: rgba(95, 88, 82, 0.6);
-  --button-bg: rgba(255, 255, 255, 0.85);
-  --button-bg-hover: rgba(255, 255, 255, 0.95);
-  --button-text: #4e4944;
-  --gift-text: #57504a;
-  --venue-indicator: rgba(120, 112, 104, 0.55);
-  --venue-indicator-hover: rgba(120, 112, 104, 0.82);
+  --ink: #1c1c1c;
 }
 
 * {
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
-  background: #ffffff;
+  background: var(--bg);
   overflow-x: hidden;
 }
 
@@ -26,11 +21,21 @@ body {
   font-family: "Montserrat", Arial, sans-serif;
 }
 
-/* === LAYOUT === */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
 .invitation-stage {
   display: flex;
   justify-content: center;
+  width: 100%;
+  background: #ffffff;
 }
 
 .invitation-card {
@@ -41,91 +46,117 @@ body {
 .invitation-image {
   width: 100%;
   display: block;
+  height: auto;
 }
 
-/* === RSVP + IBAN === */
+/* === Venue icon next to the printed venue line === */
 
-.overlay-actions {
+.venue-icon-link {
   position: absolute;
-  left: 50%;
-  bottom: 15%;
-  transform: translateX(-50%);
-  text-align: center;
+  top: 53.25%;
+  left: 54.8%;
+  width: 3.8%;
+  min-width: 18px;
+  max-width: 34px;
+  transform: translateY(-50%);
+  opacity: 0.92;
+  transition: transform 160ms ease, opacity 160ms ease;
 }
 
-.rsvp-button {
-  display: inline-flex;
+.venue-icon-link:hover,
+.venue-icon-link:focus-visible {
+  transform: translateY(-50%) scale(1.08);
+  opacity: 1;
+  outline: none;
+}
+
+.venue-icon {
+  width: 100%;
+  height: auto;
+}
+
+/* === RSVP at the bottom === */
+
+.rsvp-inline {
+  position: absolute;
+  left: 18%;
+  bottom: 11.2%;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  min-width: 120px;
-  height: 42px;
-  padding: 0 18px;
-  border-radius: 999px;
-  border: 1.4px solid var(--button-border);
-  background: var(--button-bg);
-  color: var(--button-text);
-  font-size: 0.7rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  cursor: pointer;
+  gap: 10px;
 }
 
-.rsvp-button:hover {
-  background: var(--button-bg-hover);
+.rsvp-label {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: clamp(1.55rem, 2.4vw, 2.1rem);
+  line-height: 1;
+  color: var(--ink);
+  letter-spacing: 0.01em;
 }
 
-.gift-note {
-  margin-top: 6px;
-  font-size: 0.9rem;
-  color: var(--gift-text);
+.rsvp-icon-link {
+  width: 4.4%;
+  min-width: 20px;
+  max-width: 34px;
+  opacity: 0.94;
+  transition: transform 160ms ease, opacity 160ms ease;
 }
 
-/* === CLICKABLE LOCATION === */
-
-.location-hotspot {
-  position: absolute;
-  left: 50%;
-  top: 39%;
-  transform: translateX(-50%);
-  width: 32%;
-  height: 5%;
+.rsvp-icon-link:hover,
+.rsvp-icon-link:focus-visible {
+  transform: scale(1.08);
+  opacity: 1;
+  outline: none;
 }
 
-/* subtle underline */
-.location-hotspot::after {
-  content: "";
-  position: absolute;
-  left: 10%;
-  right: 10%;
-  bottom: 15%;
-  height: 1px;
-  background: var(--venue-indicator);
+.rsvp-icon {
+  width: 100%;
+  height: auto;
 }
 
-.location-hotspot:hover::after {
-  background: var(--venue-indicator-hover);
-}
-
-/* === MOBILE === */
-
-@media (max-width: 600px) {
-
-  .overlay-actions {
-    bottom: 13%;
+@media (max-width: 768px) {
+  .venue-icon-link {
+    top: 53.35%;
+    left: 55.1%;
+    width: 5.3%;
   }
 
-  .rsvp-button {
-    height: 38px;
-    font-size: 0.65rem;
+  .rsvp-inline {
+    left: 15.5%;
+    bottom: 10.4%;
+    gap: 8px;
   }
 
-  .gift-note {
-    font-size: 0.85rem;
+  .rsvp-label {
+    font-size: clamp(1.3rem, 5.1vw, 1.8rem);
   }
 
-  .location-hotspot {
-    width: 45%;
-    height: 6%;
+  .rsvp-icon-link {
+    width: 6.6%;
+  }
+}
+
+@media (max-width: 480px) {
+  .venue-icon-link {
+    top: 53.45%;
+    left: 55.6%;
+    width: 6.2%;
+    min-width: 17px;
   }
 
+  .rsvp-inline {
+    left: 14.2%;
+    bottom: 10%;
+    gap: 7px;
+  }
+
+  .rsvp-label {
+    font-size: clamp(1.15rem, 5.6vw, 1.55rem);
+  }
+
+  .rsvp-icon-link {
+    width: 7.2%;
+    min-width: 18px;
+  }
 }
