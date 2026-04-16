@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@400;500;600&display=swap"
     rel="stylesheet"
   />
 
@@ -20,35 +20,37 @@
 </head>
 <body>
   <main class="invitation-stage">
-    <section class="invitation-card">
-
+    <section class="invitation-card" aria-label="Προσκλητήριο">
       <img
         src="assets/linear1.png"
-        alt="Προσκλητήριο"
+        alt="Προσκλητήριο γάμου και ονοματοδοσίας"
         class="invitation-image"
       />
 
-      <!-- RSVP + IBAN -->
-      <div class="overlay-actions">
+      <a
+        class="venue-icon-link"
+        href="https://maps.google.com/?q=Κτήμα+Κλεοπάτρα,+Κορωπί"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Άνοιγμα τοποθεσίας Κτήμα Κλεοπάτρα, Κορωπί στους Χάρτες Google"
+        title="Κτήμα Κλεοπάτρα, Κορωπί"
+      >
+        <img src="assets/stigma.png" alt="" class="venue-icon" />
+      </a>
+
+      <div class="rsvp-inline" aria-label="RSVP">
+        <span class="rsvp-label">rsvp</span>
         <a
           href="https://kateravr-bot.github.io/wedding-site/"
           target="_blank"
-          class="rsvp-button"
+          rel="noopener noreferrer"
+          class="rsvp-icon-link"
+          aria-label="Άνοιγμα σελίδας RSVP"
+          title="RSVP"
         >
-          RSVP
+          <img src="assets/click.png" alt="" class="rsvp-icon" />
         </a>
-
-        <p class="gift-note">Προαιρετικό δώρο ΙΒΑΝ:</p>
       </div>
-
-      <!-- Invisible clickable area for location -->
-      <a
-        class="location-hotspot"
-        href="https://maps.google.com/?q=Κτήμα+Κλεοπάτρα,+Κορωπί"
-        target="_blank"
-        title="Κτήμα Κλεοπάτρα, Κορωπί"
-      ></a>
-
     </section>
   </main>
 </body>
