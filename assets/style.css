@@ -49,12 +49,12 @@ a {
   height: auto;
 }
 
-/* === Venue icon (stigma) δίπλα στο ΚΤΗΜΑ ΚΛΕΟΠΑΤΡΑ, ΚΟΡΩΠΙ === */
+/* === Venue icon (stigma) Î´Î¯Ï€Î»Î± ÏƒÏ„Î¿ ÎšÎ¤Î—ÎœÎ‘ ÎšÎ›Î•ÎŸÎ Î‘Î¤Î¡Î‘, ÎšÎŸÎ¡Î©Î Î™ === */
 
 .venue-icon-link {
   position: absolute;
-  top: 65.1%;
-  left: 57.2%;
+  top: 58.1%;
+  left: 55.5%;
   width: 3.5%;
   min-width: 17px;
   max-width: 30px;
@@ -75,18 +75,19 @@ a {
   height: auto;
 }
 
-/* === RSVP icon κάτω από το "rsvp" της εικόνας === */
+/* === RSVP icon Î´Î¯Ï€Î»Î± ÏƒÏ„Î¿ "rsvp" Ï„Î·Ï‚ ÎµÎ¹ÎºÏŒÎ½Î±Ï‚ === */
 
 .rsvp-inline {
   position: absolute;
-  left: 29.2%;
-  bottom: 14.35%;
-  transform: translateX(-50%);
+  top: 78.6%;
+  left: 39%;
+  width: 3.9%;
+  min-width: 18px;
+  max-width: 28px;
+  transform: translate(-50%, -50%);
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 6px;
 }
 
 .rsvp-label {
@@ -99,9 +100,7 @@ a {
 }
 
 .rsvp-icon-link {
-  width: 3.9%;
-  min-width: 18px;
-  max-width: 28px;
+  width: 100%;
   opacity: 0.95;
   transition: transform 160ms ease, opacity 160ms ease;
 }
@@ -120,45 +119,21 @@ a {
 
 @media (max-width: 768px) {
   .venue-icon-link {
-    top: 55.35%;
-    left: 57.8%;
     width: 4.8%;
   }
 
   .rsvp-inline {
-    left: 29.4%;
-    bottom: 14.1%;
-    gap: 5px;
-  }
-
-  .rsvp-label {
-    font-size: clamp(1.15rem, 4vw, 1.55rem);
-  }
-
-  .rsvp-icon-link {
     width: 5.8%;
   }
 }
 
 @media (max-width: 480px) {
   .venue-icon-link {
-    top: 55.6%;
-    left: 58.3%;
     width: 5.6%;
     min-width: 16px;
   }
 
   .rsvp-inline {
-    left: 29.6%;
-    bottom: 13.9%;
-    gap: 4px;
-  }
-
-  .rsvp-label {
-    font-size: clamp(1.02rem, 4.7vw, 1.28rem);
-  }
-
-  .rsvp-icon-link {
     width: 6.4%;
     min-width: 17px;
   }
