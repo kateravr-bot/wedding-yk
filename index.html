@@ -21,10 +21,16 @@
   <style>
     .invitation-card {
       position: relative;
+      display: inline-block;
+      width: min(100%, 1024px);
+      max-width: 100%;
+      line-height: 0;
     }
 
     .invitation-image {
       display: block;
+      width: 100%;
+      height: auto;
     }
 
     .venue-text-link,
@@ -35,27 +41,35 @@
       background: transparent;
       text-decoration: none;
       cursor: pointer;
+      line-height: normal;
+      border-radius: 6px;
     }
 
+    /* Περιοχή: ΚΤΗΜΑ ΚΛΕΟΠΑΤΡΑ, ΚΟΡΩΠΙ */
     .venue-text-link {
-      left: 10.5%;
-      top: 63.9%;
-      width: 47%;
-      height: 5%;
+      left: 11.5%;
+      top: 67.9%;
+      width: 40.5%;
+      height: 4.2%;
     }
 
+    /* Περιοχή: Επιβεβαίωση παρουσίας εδώ ως 27/07. */
     .rsvp-text-link {
       left: 10.5%;
-      top: 73.4%;
-      width: 47%;
-      height: 4.1%;
+      top: 78.3%;
+      width: 43.5%;
+      height: 4.0%;
+    }
+
+    .venue-text-link:hover,
+    .rsvp-text-link:hover {
+      background: rgba(0, 0, 0, 0.025);
     }
 
     .venue-text-link:focus-visible,
     .rsvp-text-link:focus-visible {
       outline: 2px solid rgba(0, 0, 0, 0.45);
       outline-offset: 3px;
-      border-radius: 6px;
     }
   </style>
 </head>
