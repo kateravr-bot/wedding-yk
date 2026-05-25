@@ -17,6 +17,31 @@
   />
 
   <link rel="stylesheet" href="assets/style.css" />
+
+  <style>
+    .invitation-card {
+      position: relative;
+    }
+
+    .rsvp-text-link {
+      position: absolute;
+      left: 10.5%;
+      top: 73.4%;
+      width: 47%;
+      height: 4.1%;
+      display: block;
+      z-index: 5;
+      text-decoration: none;
+      background: transparent;
+      cursor: pointer;
+    }
+
+    .rsvp-text-link:focus-visible {
+      outline: 2px solid rgba(0, 0, 0, 0.45);
+      outline-offset: 3px;
+      border-radius: 6px;
+    }
+  </style>
 </head>
 <body>
   <main class="invitation-stage">
@@ -28,29 +53,13 @@
       />
 
       <a
-        class="venue-icon-link"
-        href="https://maps.google.com/?q=Κτήμα+Κλεοπάτρα,+Κορωπί"
+        class="rsvp-text-link"
+        href="https://kateravr-bot.github.io/wedding-site/"
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Άνοιγμα τοποθεσίας Κτήμα Κλεοπάτρα, Κορωπί στους Χάρτες Google"
-        title="Κτήμα Κλεοπάτρα, Κορωπί"
-      >
-        <img src="assets/stigma.png" alt="" class="venue-icon" />
-      </a>
-
-      <div class="rsvp-inline" aria-label="RSVP">
-   <!--     <span class="rsvp-label">Επιβεβαίωση παρουσίας ως 20/07</span> -->
-        <a
-          href="https://kateravr-bot.github.io/wedding-site/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="rsvp-icon-link"
-          aria-label="Άνοιγμα σελίδας RSVP"
-          title="RSVP"
-        >
-          <img src="assets/click.png" alt="" class="rsvp-icon" />
-        </a>
-      </div>
+        aria-label="Επιβεβαίωση παρουσίας έως 27/07"
+        title="Επιβεβαίωση παρουσίας"
+      ></a>
     </section>
   </main>
 </body>
