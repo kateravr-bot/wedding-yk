@@ -23,19 +23,35 @@
       position: relative;
     }
 
+    .invitation-image {
+      display: block;
+    }
+
+    .venue-text-link,
     .rsvp-text-link {
       position: absolute;
+      display: block;
+      z-index: 5;
+      background: transparent;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .venue-text-link {
+      left: 10.5%;
+      top: 63.9%;
+      width: 47%;
+      height: 5%;
+    }
+
+    .rsvp-text-link {
       left: 10.5%;
       top: 73.4%;
       width: 47%;
       height: 4.1%;
-      display: block;
-      z-index: 5;
-      text-decoration: none;
-      background: transparent;
-      cursor: pointer;
     }
 
+    .venue-text-link:focus-visible,
     .rsvp-text-link:focus-visible {
       outline: 2px solid rgba(0, 0, 0, 0.45);
       outline-offset: 3px;
@@ -51,6 +67,15 @@
         alt="Προσκλητήριο γάμου και ονοματοδοσίας"
         class="invitation-image"
       />
+
+      <a
+        class="venue-text-link"
+        href="https://maps.app.goo.gl/83N2TdXBCzwDKf6F9"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Άνοιγμα τοποθεσίας Κτήμα Κλεοπάτρα, Κορωπί στους Χάρτες Google"
+        title="Κτήμα Κλεοπάτρα, Κορωπί"
+      ></a>
 
       <a
         class="rsvp-text-link"
