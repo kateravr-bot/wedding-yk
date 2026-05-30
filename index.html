@@ -75,6 +75,31 @@ a{color:inherit;text-decoration:none;}
 }
 @keyframes rise{to{opacity:1;transform:none;}}
 @keyframes fadein{to{opacity:1;}}
+
+
+/* ---- phones: reflow to a single readable column ---- */
+@media (max-width:640px){
+  .stage{padding:16px 12px;align-items:flex-start;}
+  .invitation{display:block;}
+  .text-col{padding:38px 26px 14px;gap:22px;}
+  .names svg{width:min(84%,360px);}
+  .intro{font-size:1.04rem;line-height:1.95;}
+  .rule{width:min(72%,240px);margin:2px auto;}
+  .date{font-size:.96rem;letter-spacing:.14em;}
+  .date .time{letter-spacing:.16em;}
+  .divider{width:min(78%,260px);gap:14px;}
+  .divider img{width:34px;min-width:0;}
+  .venue a{font-size:.95rem;letter-spacing:.14em;padding:6px 4px;}
+  .rsvp{font-size:.95rem;}
+  .floral-col{padding:8px 0 34px;justify-content:center;}
+  .floral-col img{width:auto;height:auto;max-height:300px;max-width:74%;margin:0 auto;object-fit:contain;object-position:center;}
+}
+@media (max-width:380px){
+  .intro{font-size:.98rem;}
+  .date{font-size:.9rem;letter-spacing:.1em;}
+  .venue a{font-size:.9rem;letter-spacing:.1em;}
+}
+
 </style>
 </head>
 <body>
